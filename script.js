@@ -6,6 +6,59 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     // -------------------------------
+    // Load Zambia maths papers
+    // -------------------------------
+    const paperList = document.getElementById("zambia-paper-list");
+
+    if (paperList) {
+        fetch("papers.json")
+            .then(function (response) {
+                if (!response.ok) {
+                    throw new Error("Could not load papers.json");
+                }
+                return response.json();
+            })
+            .then(function (papersData) {
+                paperList.replaceChildren();
+
+                if (!Array.isArray(papersData) || papersData.length === 0) {
+                    paperList.textContent = "No Zambia maths papers are available yet.";
+                    return;
+                }
+
+                papersData.forEach(function (paper) {
+                    if (!paper || typeof paper.name !== "string" || typeof paper.url !== "string") {
+                        return;
+                    }
+
+                    const item = document.createElement("article");
+                    item.className = "paper-item";
+
+                    const title = document.createElement("h3");
+                    title.textContent = paper.name;
+
+                    const link = document.createElement("a");
+                    link.className = "button";
+                    link.href = paper.url;
+                    link.target = "_blank";
+                    link.rel = "noopener noreferrer";
+                    link.textContent = "Open paper";
+
+                    item.append(title, link);
+                    paperList.appendChild(item);
+                });
+
+                if (paperList.childElementCount === 0) {
+                    paperList.textContent = "No valid Zambia maths papers were found.";
+                }
+            })
+            .catch(function (error) {
+                console.error("Error loading Zambia maths papers:", error);
+                paperList.textContent = "Sorry, Zambia maths papers could not be loaded. Please try again later.";
+            });
+    }
+
+    // -------------------------------
     // Search functionality
     // -------------------------------
     const searchInput = document.getElementById("searchInput");
