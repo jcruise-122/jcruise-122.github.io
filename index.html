@@ -1,381 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Benes Papers - Global Past Papers</title>
-
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        body {
-            background: #f4f6f8;
-            color: #222;
-        }
-
-        header {
-            background: #0b3d91;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        header h1 {
-            font-size: 28px;
-        }
-
-        header p {
-            margin-top: 8px;
-        }
-
-        nav {
-            background: #082c6c;
-            padding: 12px;
-            text-align: center;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
-            font-weight: bold;
-        }
-
-        .hero {
-            text-align: center;
-            padding: 40px 20px;
-            background: white;
-        }
-
-        .hero h2 {
-            font-size: 30px;
-            color: #0b3d91;
-            margin-bottom: 10px;
-        }
-
-        .hero p {
-            margin-bottom: 20px;
-        }
-
-        .search-box {
-            max-width: 600px;
-            margin: auto;
-        }
-
-        .search-box input {
-            width: 100%;
-            padding: 14px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            font-size: 16px;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: auto;
-            padding: 30px 20px;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 25px;
-            color: #0b3d91;
-        }
-
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-        }
-
-        .card {
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-
-        .card h3 {
-            color: #0b3d91;
-            margin-bottom: 10px;
-        }
-
-        .card p {
-            margin-bottom: 15px;
-            color: #555;
-        }
-
-        .level {
-            display: inline-block;
-            margin: 0 0 15px;
-            padding: 4px 10px;
-            border-radius: 999px;
-            background: #e8f0ff;
-            color: #0b3d91;
-            font-size: 14px;
-            font-weight: bold;
-        }
-
-        .button {
-            display: inline-block;
-            background: #0b3d91;
-            color: white;
-            padding: 10px 18px;
-            border-radius: 6px;
-            text-decoration: none;
-        }
-
-        .paper-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 16px;
-        }
-
-        .paper-item {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-        }
-
-        .paper-item h3 {
-            color: #0b3d91;
-            margin-bottom: 12px;
-        }
-
-        .payment {
-            background: #0b3d91;
-            color: white;
-            text-align: center;
-            padding: 35px 20px;
-            margin-top: 20px;
-        }
-
-        .payment h2 {
-            margin-bottom: 10px;
-        }
-
-        footer {
-            background: #082c6c;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 30px;
-        }
-
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 23px;
-            }
-
-            .hero h2 {
-                font-size: 24px;
-            }
-
-            nav a {
-                display: inline-block;
-                margin: 5px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Benes Papers - Global Past Papers</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Arial, sans-serif; background: #f4f6f8; color: #222; line-height: 1.5; }
+    header, footer { background: #082c6c; color: white; text-align: center; padding: 22px 16px; }
+    header h1 { margin: 0; }
+    nav { background: #0b3d91; padding: 12px; text-align: center; }
+    nav a { color: white; margin: 0 12px; text-decoration: none; font-weight: bold; }
+    .hero { text-align: center; padding: 35px 18px; background: white; }
+    .hero h2, .section-title { color: #0b3d91; }
+    .container { max-width: 1000px; margin: 28px auto; padding: 0 18px; }
+    .selector-panel { background: white; padding: 24px; border-radius: 12px; box-shadow: 0 3px 12px #00000012; }
+    .selector-chain { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 16px; }
+    label { display: block; font-weight: bold; margin-bottom: 6px; }
+    select { width: 100%; padding: 12px; border: 1px solid #bdc7d4; border-radius: 7px; background: white; font-size: 16px; }
+    select:disabled { background: #eef1f5; color: #687386; }
+    #selection-status { margin: 18px 0 0; color: #555; }
+    #paper-results { margin-top: 20px; }
+    .paper-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; }
+    .paper-item { background: #f8faff; border: 1px solid #dce5f2; border-radius: 9px; padding: 18px; }
+    .paper-item h3 { margin: 0 0 12px; color: #0b3d91; font-size: 18px; }
+    .button { display: inline-block; padding: 10px 16px; border-radius: 6px; background: #0b3d91; color: white; text-decoration: none; }
+    .button:hover { background: #082c6c; }
+    .payment { margin-top: 32px; padding: 30px 18px; background: #0b3d91; color: white; text-align: center; }
+    .payment h2 { margin-top: 0; }
+    #quiz-section { max-width: 1000px; margin: 30px auto; padding: 20px; }
+    #quiz-section button { margin: 6px; padding: 10px 14px; cursor: pointer; }
+    #quiz-section input { padding: 10px; max-width: 100%; }
+    footer { margin-top: 32px; }
+    footer p { margin: 5px; }
+    @media (max-width: 600px) { nav a { display: inline-block; margin: 5px; } .selector-panel { padding: 17px; } }
+  </style>
 </head>
-
 <body>
-
-<header>
+  <header>
     <h1>Benes Papers</h1>
-    <p>Global Past Papers & Educational Resources</p>
-</header>
-
-<nav>
-    <a href="#">Home</a>
-    <a href="#countries">Countries</a>
-    <a href="#universities">Subjects & Courses</a>
+    <p>Global Past Papers &amp; Educational Resources</p>
+  </header>
+  <nav aria-label="Main navigation">
+    <a href="#home">Home</a>
+    <a href="#paper-finder">Find Papers</a>
     <a href="#answers">Explained Answers</a>
-</nav>
-
-<section class="hero">
+  </nav>
+  <section class="hero" id="home">
     <h2>Find Past Papers From Around the World</h2>
-
-    <p>
-        Access school, college and university examination papers
-        from different countries in one place.
-    </p>
-
-    <div class="search-box">
-        <input type="text" placeholder="Search for a country, subject or university...">
-    </div>
-</section>
-
-<section class="container" id="countries">
-
-    <h2 class="section-title">Countries</h2>
-
-    <div class="cards">
-
-        <div class="card">
-            <h3>🇿🇲 Zambia</h3>
-            <p>ECZ past papers and educational resources.</p>
-            <a href="#zambia-papers" class="button">View Papers</a>
+    <p>Choose a country, level, and subject or course to see the matching papers.</p>
+  </section>
+  <main>
+    <section class="container" id="paper-finder">
+      <h2 class="section-title">Find a Paper</h2>
+      <div class="selector-panel">
+        <div class="selector-chain">
+          <div>
+            <label for="country-select">1. Country</label>
+            <select id="country-select"><option value="">Select a country</option></select>
+          </div>
+          <div>
+            <label for="level-select">2. Grade / level</label>
+            <select id="level-select" disabled><option value="">Select a grade or level</option></select>
+          </div>
+          <div>
+            <label for="subject-select">3. Subject / course</label>
+            <select id="subject-select" disabled><option value="">Select a subject or course</option></select>
+          </div>
         </div>
-
-        <div class="card">
-            <h3>🇿🇦 South Africa</h3>
-            <p>Past examination papers and resources.</p>
-            <a href="#" class="button">View Papers</a>
-        </div>
-
-        <div class="card">
-            <h3>🇬🇧 United Kingdom</h3>
-            <p>GCSE, A-Level and university resources.</p>
-            <a href="#" class="button">View Papers</a>
-        </div>
-
-        <div class="card">
-            <h3>🇺🇸 United States</h3>
-            <p>Educational examination resources.</p>
-            <a href="#" class="button">View Papers</a>
-        </div>
-
-    </div>
-
-</section>
-
-<section class="container" id="zambia-papers">
-    <h2 class="section-title">🇿🇲 Zambia Mathematics — Grade 12</h2>
-    <div class="paper-list" id="zambia-paper-list" aria-live="polite">
-        <p>Loading Zambia past papers…</p>
-    </div>
-</section>
-
-<section class="container" id="universities">
-
-    <h2 class="section-title">Subjects & Courses</h2>
-
-    <div class="cards">
-
-        <div class="card">
-            <h3>Computer Science</h3>
-            <span class="level">Degree level</span>
-            <p>Computer science examination papers.</p>
-            <a href="#" class="button">View Papers</a>
-        </div>
-
-        <div class="card">
-            <h3>Medicine</h3>
-            <span class="level">Degree level</span>
-            <p>Medical examination papers and resources.</p>
-            <a href="#" class="button">View Papers</a>
-        </div>
-
-        <div class="card">
-            <h3>Business</h3>
-            <span class="level">Degree level</span>
-            <p>Business and accounting examination papers.</p>
-            <a href="#" class="button">View Papers</a>
-        </div>
-
-        <div class="card">
-            <h3>Engineering</h3>
-            <span class="level">Degree level</span>
-            <p>Engineering examination papers.</p>
-            <a href="#" class="button">View Papers</a>
-        </div>
-
-        <div class="card">
-            <h3>Mathematics</h3>
-            <span class="level">Grade 12</span>
-            <p>Zambia GCE Mathematics past papers.</p>
-            <a href="#zambia-papers" class="button">View Grade 12 Papers</a>
-        </div>
-
-    </div>
-
-</section>
-
-<section class="payment" id="answers">
-
-    <h2>Need Explained Answers?</h2>
-
-    <p>
-        Get detailed explanations and solutions to selected past papers.
-    </p>
-
-    <br>
-
-    <strong>Access explained answers for only K1.00</strong>
-
-    <br><br>
-
-    <a href="#" class="button">Get Explained Answers</a>
-
-</section>
-
-<footer>
-
-    <p>© 2026 Benes Papers</p>
-
-    <p>Created by Benes Makaza</p>
-
-    <p>Global Educational Resources</p>
-
-</footer>
-<!-- QUIZ SECTION -->
-<section id="quiz-section">
-    <h2>🧠 Quiz Challenge</h2>
-    <p>Test yourself or challenge your friends!</p>
-
-    <div class="quiz-options">
+        <p id="selection-status" aria-live="polite">Select a country to begin. Papers will appear after you choose all three options.</p>
+        <div id="paper-results" aria-live="polite" hidden></div>
+      </div>
+    </section>
+    <section class="payment" id="answers">
+      <h2>Need Explained Answers?</h2>
+      <p>Get detailed explanations and solutions to selected past papers.</p>
+      <strong>Access explained answers for only K1.00</strong>
+    </section>
+    <section id="quiz-section">
+      <h2>🧠 Quiz Challenge</h2>
+      <p>Test yourself or challenge your friends!</p>
+      <div class="quiz-options">
         <button onclick="startSoloQuiz()">🎯 Solo Quiz</button>
         <button onclick="startBattleQuiz()">⚔️ Challenge Friends</button>
-    </div>
-
-    <div id="quiz-container" style="display: none;">
+      </div>
+      <div id="quiz-container" style="display:none">
         <h3 id="quiz-question">Question will appear here</h3>
-
         <div id="quiz-answers"></div>
-
         <p id="quiz-score">Score: 0</p>
-
-        <button id="next-question" onclick="nextQuestion()">
-            Next Question
-        </button>
-
-        <button onclick="endQuiz()">
-            End Quiz
-        </button>
-    </div>
-
-    <div id="battle-container" style="display: none;">
+        <button id="next-question" onclick="nextQuestion()">Next Question</button>
+        <button onclick="endQuiz()">End Quiz</button>
+      </div>
+      <div id="battle-container" style="display:none">
         <h3>⚔️ Quiz Battle</h3>
-
-        <label>Player 1:</label>
-        <input type="text" id="player1" placeholder="Enter name">
-
-        <br><br>
-
-        <label>Player 2:</label>
-        <input type="text" id="player2" placeholder="Enter name">
-
-        <br><br>
-
-        <label>Player 3:</label>
-        <input type="text" id="player3" placeholder="Optional">
-
-        <br><br>
-
-        <button onclick="startBattle()">
-            Start Battle
-        </button>
-    </div>
-</section>
-<!-- END QUIZ SECTION -->
-<script src="script.js"></script>
+        <label for="player1">Player 1</label><input id="player1" placeholder="Enter name">
+        <label for="player2">Player 2</label><input id="player2" placeholder="Enter name">
+        <label for="player3">Player 3 (optional)</label><input id="player3" placeholder="Enter name">
+        <p><button onclick="startBattle()">Start Battle</button></p>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>© 2026 Benes Papers</p>
+    <p>Created by Benes Makaza</p>
+    <p>Global Educational Resources</p>
+  </footer>
+  <script src="script.js"></script>
+  <script src="cascade.js"></script>
 </body>
 </html>
