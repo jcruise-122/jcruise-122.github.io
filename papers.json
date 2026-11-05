@@ -1,10 +1,16 @@
 [
   {
-    "name": "2024 P1 GCE",
-    "url": "https://raw.githubusercontent.com/jcruise-122/jcruise-122.github.io/main/2024%20P1%20GCE%20%286%29.pdf"
+    "name": "Grade 12 Mathematics — 2024 P1 GCE",
+    "url": "https://raw.githubusercontent.com/jcruise-122/jcruise-122.github.io/main/2024%20P1%20GCE%20%286%29.pdf",
+    "subject": "Mathematics",
+    "level": "Grade 12",
+    "country": "Zambia"
   },
   {
-    "name": "2024 P2 GCE",
-    "url": "https://raw.githubusercontent.com/jcruise-122/jcruise-122.github.io/main/2024%20P2%20GCE%20%282%29.pdf"
+    "name": "Grade 12 Mathematics — 2024 P2 GCE",
+    "url": "https://raw.githubusercontent.com/jcruise-122/jcruise-122.github.io/main/2024%20P2%20GCE%20%282%29.pdf",
+    "subject": "Mathematics",
+    "level": "Grade 12",
+    "country": "Zambia"
   }
 ]
