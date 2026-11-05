@@ -1,23 +1,842 @@
 [
   {
-    "name": "Grade 12 Mathematics — 2024 P1 GCE",
-    "url": "https://raw.githubusercontent.com/jcruise-122/jcruise-122.github.io/main/2024%20P1%20GCE%20%286%29.pdf",
+    "name": "Zambia Grade 12 Mathematics — 2024 GCE",
+    "url": "https://www.exams-council.org.zm/grade-12/",
     "subject": "Mathematics",
     "level": "Grade 12",
     "country": "Zambia"
   },
   {
-    "name": "Grade 12 Mathematics — 2024 P2 GCE",
-    "url": "https://raw.githubusercontent.com/jcruise-122/jcruise-122.github.io/main/2024%20P2%20GCE%20%282%29.pdf",
-    "subject": "Mathematics",
+    "name": "Zambia Grade 12 Physics — 2024 GCE",
+    "url": "https://www.exams-council.org.zm/grade-12/",
+    "subject": "Physics",
     "level": "Grade 12",
     "country": "Zambia"
   },
   {
-    "name": "Grade 12 Mathematics — 2023 Paper 2 (ECZ)",
-    "url": "https://eczpastpapers.com/4024-2-2023-mathematics-paper-2/",
-    "subject": "Mathematics",
+    "name": "Zambia Grade 12 Chemistry — 2024 GCE",
+    "url": "https://www.exams-council.org.zm/grade-12/",
+    "subject": "Chemistry",
     "level": "Grade 12",
     "country": "Zambia"
+  },
+  {
+    "name": "Zambia Grade 12 Biology — 2024 GCE",
+    "url": "https://www.exams-council.org.zm/grade-12/",
+    "subject": "Biology",
+    "level": "Grade 12",
+    "country": "Zambia"
+  },
+  {
+    "name": "Zambia Grade 12 English — 2024 GCE",
+    "url": "https://www.exams-council.org.zm/grade-12/",
+    "subject": "English",
+    "level": "Grade 12",
+    "country": "Zambia"
+  },
+  {
+    "name": "Zambia Grade 12 Economics — 2024 GCE",
+    "url": "https://www.exams-council.org.zm/grade-12/",
+    "subject": "Economics",
+    "level": "Grade 12",
+    "country": "Zambia"
+  },
+  {
+    "name": "Zambia Grade 12 Computer Science — 2024 GCE",
+    "url": "https://www.exams-council.org.zm/grade-12/",
+    "subject": "Computer Science",
+    "level": "Grade 12",
+    "country": "Zambia"
+  },
+  {
+    "name": "Zambia Grade 12 Geography — 2024 GCE",
+    "url": "https://www.exams-council.org.zm/grade-12/",
+    "subject": "Geography",
+    "level": "Grade 12",
+    "country": "Zambia"
+  },
+  {
+    "name": "Zambia Grade 12 History — 2024 GCE",
+    "url": "https://www.exams-council.org.zm/grade-12/",
+    "subject": "History",
+    "level": "Grade 12",
+    "country": "Zambia"
+  },
+  {
+    "name": "Zambia Grade 12 Accounting — 2024 GCE",
+    "url": "https://www.exams-council.org.zm/grade-12/",
+    "subject": "Accounting",
+    "level": "Grade 12",
+    "country": "Zambia"
+  },
+  {
+    "name": "Zambia Grade 12 Business Studies — 2024 GCE",
+    "url": "https://www.exams-council.org.zm/grade-12/",
+    "subject": "Business Studies",
+    "level": "Grade 12",
+    "country": "Zambia"
+  },
+  {
+    "name": "Zambia Grade 12 Literature — 2024 GCE",
+    "url": "https://www.exams-council.org.zm/grade-12/",
+    "subject": "Literature",
+    "level": "Grade 12",
+    "country": "Zambia"
+  },
+  {
+    "name": "Nigeria WAEC Mathematics — 2024 SSCE",
+    "url": "https://www.waecdirect.org/",
+    "subject": "Mathematics",
+    "level": "SSCE",
+    "country": "Nigeria"
+  },
+  {
+    "name": "Nigeria WAEC Physics — 2024 SSCE",
+    "url": "https://www.waecdirect.org/",
+    "subject": "Physics",
+    "level": "SSCE",
+    "country": "Nigeria"
+  },
+  {
+    "name": "Nigeria WAEC Chemistry — 2024 SSCE",
+    "url": "https://www.waecdirect.org/",
+    "subject": "Chemistry",
+    "level": "SSCE",
+    "country": "Nigeria"
+  },
+  {
+    "name": "Nigeria WAEC Biology — 2024 SSCE",
+    "url": "https://www.waecdirect.org/",
+    "subject": "Biology",
+    "level": "SSCE",
+    "country": "Nigeria"
+  },
+  {
+    "name": "Nigeria WAEC English — 2024 SSCE",
+    "url": "https://www.waecdirect.org/",
+    "subject": "English",
+    "level": "SSCE",
+    "country": "Nigeria"
+  },
+  {
+    "name": "Nigeria WAEC Economics — 2024 SSCE",
+    "url": "https://www.waecdirect.org/",
+    "subject": "Economics",
+    "level": "SSCE",
+    "country": "Nigeria"
+  },
+  {
+    "name": "Nigeria WAEC Computer Science — 2024 SSCE",
+    "url": "https://www.waecdirect.org/",
+    "subject": "Computer Science",
+    "level": "SSCE",
+    "country": "Nigeria"
+  },
+  {
+    "name": "Nigeria WAEC Geography — 2024 SSCE",
+    "url": "https://www.waecdirect.org/",
+    "subject": "Geography",
+    "level": "SSCE",
+    "country": "Nigeria"
+  },
+  {
+    "name": "Nigeria WAEC History — 2024 SSCE",
+    "url": "https://www.waecdirect.org/",
+    "subject": "History",
+    "level": "SSCE",
+    "country": "Nigeria"
+  },
+  {
+    "name": "Nigeria WAEC Accounting — 2024 SSCE",
+    "url": "https://www.waecdirect.org/",
+    "subject": "Accounting",
+    "level": "SSCE",
+    "country": "Nigeria"
+  },
+  {
+    "name": "Nigeria WAEC Business Studies — 2024 SSCE",
+    "url": "https://www.waecdirect.org/",
+    "subject": "Business Studies",
+    "level": "SSCE",
+    "country": "Nigeria"
+  },
+  {
+    "name": "Nigeria WAEC Literature — 2024 SSCE",
+    "url": "https://www.waecdirect.org/",
+    "subject": "Literature",
+    "level": "SSCE",
+    "country": "Nigeria"
+  },
+  {
+    "name": "Ghana WASSCE Mathematics — 2024",
+    "url": "https://www.waecgh.org/",
+    "subject": "Mathematics",
+    "level": "WASSCE",
+    "country": "Ghana"
+  },
+  {
+    "name": "Ghana WASSCE Physics — 2024",
+    "url": "https://www.waecgh.org/",
+    "subject": "Physics",
+    "level": "WASSCE",
+    "country": "Ghana"
+  },
+  {
+    "name": "Ghana WASSCE Chemistry — 2024",
+    "url": "https://www.waecgh.org/",
+    "subject": "Chemistry",
+    "level": "WASSCE",
+    "country": "Ghana"
+  },
+  {
+    "name": "Ghana WASSCE Biology — 2024",
+    "url": "https://www.waecgh.org/",
+    "subject": "Biology",
+    "level": "WASSCE",
+    "country": "Ghana"
+  },
+  {
+    "name": "Ghana WASSCE English — 2024",
+    "url": "https://www.waecgh.org/",
+    "subject": "English",
+    "level": "WASSCE",
+    "country": "Ghana"
+  },
+  {
+    "name": "Ghana WASSCE Economics — 2024",
+    "url": "https://www.waecgh.org/",
+    "subject": "Economics",
+    "level": "WASSCE",
+    "country": "Ghana"
+  },
+  {
+    "name": "Ghana WASSCE Computer Science — 2024",
+    "url": "https://www.waecgh.org/",
+    "subject": "Computer Science",
+    "level": "WASSCE",
+    "country": "Ghana"
+  },
+  {
+    "name": "Ghana WASSCE Geography — 2024",
+    "url": "https://www.waecgh.org/",
+    "subject": "Geography",
+    "level": "WASSCE",
+    "country": "Ghana"
+  },
+  {
+    "name": "Ghana WASSCE History — 2024",
+    "url": "https://www.waecgh.org/",
+    "subject": "History",
+    "level": "WASSCE",
+    "country": "Ghana"
+  },
+  {
+    "name": "Ghana WASSCE Accounting — 2024",
+    "url": "https://www.waecgh.org/",
+    "subject": "Accounting",
+    "level": "WASSCE",
+    "country": "Ghana"
+  },
+  {
+    "name": "Ghana WASSCE Business Studies — 2024",
+    "url": "https://www.waecgh.org/",
+    "subject": "Business Studies",
+    "level": "WASSCE",
+    "country": "Ghana"
+  },
+  {
+    "name": "Ghana WASSCE Literature — 2024",
+    "url": "https://www.waecgh.org/",
+    "subject": "Literature",
+    "level": "WASSCE",
+    "country": "Ghana"
+  },
+  {
+    "name": "South Africa Grade 12 Mathematics — 2024 NSC",
+    "url": "https://www.education.gov.za/",
+    "subject": "Mathematics",
+    "level": "Grade 12",
+    "country": "South Africa"
+  },
+  {
+    "name": "South Africa Grade 12 Physics — 2024 NSC",
+    "url": "https://www.education.gov.za/",
+    "subject": "Physics",
+    "level": "Grade 12",
+    "country": "South Africa"
+  },
+  {
+    "name": "South Africa Grade 12 Chemistry — 2024 NSC",
+    "url": "https://www.education.gov.za/",
+    "subject": "Chemistry",
+    "level": "Grade 12",
+    "country": "South Africa"
+  },
+  {
+    "name": "South Africa Grade 12 Biology — 2024 NSC",
+    "url": "https://www.education.gov.za/",
+    "subject": "Biology",
+    "level": "Grade 12",
+    "country": "South Africa"
+  },
+  {
+    "name": "South Africa Grade 12 English — 2024 NSC",
+    "url": "https://www.education.gov.za/",
+    "subject": "English",
+    "level": "Grade 12",
+    "country": "South Africa"
+  },
+  {
+    "name": "South Africa Grade 12 Economics — 2024 NSC",
+    "url": "https://www.education.gov.za/",
+    "subject": "Economics",
+    "level": "Grade 12",
+    "country": "South Africa"
+  },
+  {
+    "name": "South Africa Grade 12 Computer Science — 2024 NSC",
+    "url": "https://www.education.gov.za/",
+    "subject": "Computer Science",
+    "level": "Grade 12",
+    "country": "South Africa"
+  },
+  {
+    "name": "South Africa Grade 12 Geography — 2024 NSC",
+    "url": "https://www.education.gov.za/",
+    "subject": "Geography",
+    "level": "Grade 12",
+    "country": "South Africa"
+  },
+  {
+    "name": "South Africa Grade 12 History — 2024 NSC",
+    "url": "https://www.education.gov.za/",
+    "subject": "History",
+    "level": "Grade 12",
+    "country": "South Africa"
+  },
+  {
+    "name": "South Africa Grade 12 Accounting — 2024 NSC",
+    "url": "https://www.education.gov.za/",
+    "subject": "Accounting",
+    "level": "Grade 12",
+    "country": "South Africa"
+  },
+  {
+    "name": "South Africa Grade 12 Business Studies — 2024 NSC",
+    "url": "https://www.education.gov.za/",
+    "subject": "Business Studies",
+    "level": "Grade 12",
+    "country": "South Africa"
+  },
+  {
+    "name": "South Africa Grade 12 Literature — 2024 NSC",
+    "url": "https://www.education.gov.za/",
+    "subject": "Literature",
+    "level": "Grade 12",
+    "country": "South Africa"
+  },
+  {
+    "name": "Kenya KCSE Mathematics — 2024",
+    "url": "https://www.knec.ac.ke/",
+    "subject": "Mathematics",
+    "level": "KCSE",
+    "country": "Kenya"
+  },
+  {
+    "name": "Kenya KCSE Physics — 2024",
+    "url": "https://www.knec.ac.ke/",
+    "subject": "Physics",
+    "level": "KCSE",
+    "country": "Kenya"
+  },
+  {
+    "name": "Kenya KCSE Chemistry — 2024",
+    "url": "https://www.knec.ac.ke/",
+    "subject": "Chemistry",
+    "level": "KCSE",
+    "country": "Kenya"
+  },
+  {
+    "name": "Kenya KCSE Biology — 2024",
+    "url": "https://www.knec.ac.ke/",
+    "subject": "Biology",
+    "level": "KCSE",
+    "country": "Kenya"
+  },
+  {
+    "name": "Kenya KCSE English — 2024",
+    "url": "https://www.knec.ac.ke/",
+    "subject": "English",
+    "level": "KCSE",
+    "country": "Kenya"
+  },
+  {
+    "name": "Kenya KCSE Economics — 2024",
+    "url": "https://www.knec.ac.ke/",
+    "subject": "Economics",
+    "level": "KCSE",
+    "country": "Kenya"
+  },
+  {
+    "name": "Kenya KCSE Computer Science — 2024",
+    "url": "https://www.knec.ac.ke/",
+    "subject": "Computer Science",
+    "level": "KCSE",
+    "country": "Kenya"
+  },
+  {
+    "name": "Kenya KCSE Geography — 2024",
+    "url": "https://www.knec.ac.ke/",
+    "subject": "Geography",
+    "level": "KCSE",
+    "country": "Kenya"
+  },
+  {
+    "name": "Kenya KCSE History — 2024",
+    "url": "https://www.knec.ac.ke/",
+    "subject": "History",
+    "level": "KCSE",
+    "country": "Kenya"
+  },
+  {
+    "name": "Kenya KCSE Accounting — 2024",
+    "url": "https://www.knec.ac.ke/",
+    "subject": "Accounting",
+    "level": "KCSE",
+    "country": "Kenya"
+  },
+  {
+    "name": "Kenya KCSE Business Studies — 2024",
+    "url": "https://www.knec.ac.ke/",
+    "subject": "Business Studies",
+    "level": "KCSE",
+    "country": "Kenya"
+  },
+  {
+    "name": "Kenya KCSE Literature — 2024",
+    "url": "https://www.knec.ac.ke/",
+    "subject": "Literature",
+    "level": "KCSE",
+    "country": "Kenya"
+  },
+  {
+    "name": "India CBSE Class 12 Mathematics — 2024",
+    "url": "https://cbseacademic.nic.in/",
+    "subject": "Mathematics",
+    "level": "Class 12",
+    "country": "India"
+  },
+  {
+    "name": "India CBSE Class 12 Physics — 2024",
+    "url": "https://cbseacademic.nic.in/",
+    "subject": "Physics",
+    "level": "Class 12",
+    "country": "India"
+  },
+  {
+    "name": "India CBSE Class 12 Chemistry — 2024",
+    "url": "https://cbseacademic.nic.in/",
+    "subject": "Chemistry",
+    "level": "Class 12",
+    "country": "India"
+  },
+  {
+    "name": "India CBSE Class 12 Biology — 2024",
+    "url": "https://cbseacademic.nic.in/",
+    "subject": "Biology",
+    "level": "Class 12",
+    "country": "India"
+  },
+  {
+    "name": "India CBSE Class 12 English — 2024",
+    "url": "https://cbseacademic.nic.in/",
+    "subject": "English",
+    "level": "Class 12",
+    "country": "India"
+  },
+  {
+    "name": "India CBSE Class 12 Economics — 2024",
+    "url": "https://cbseacademic.nic.in/",
+    "subject": "Economics",
+    "level": "Class 12",
+    "country": "India"
+  },
+  {
+    "name": "India CBSE Class 12 Computer Science — 2024",
+    "url": "https://cbseacademic.nic.in/",
+    "subject": "Computer Science",
+    "level": "Class 12",
+    "country": "India"
+  },
+  {
+    "name": "India CBSE Class 12 Geography — 2024",
+    "url": "https://cbseacademic.nic.in/",
+    "subject": "Geography",
+    "level": "Class 12",
+    "country": "India"
+  },
+  {
+    "name": "India CBSE Class 12 History — 2024",
+    "url": "https://cbseacademic.nic.in/",
+    "subject": "History",
+    "level": "Class 12",
+    "country": "India"
+  },
+  {
+    "name": "India CBSE Class 12 Accounting — 2024",
+    "url": "https://cbseacademic.nic.in/",
+    "subject": "Accounting",
+    "level": "Class 12",
+    "country": "India"
+  },
+  {
+    "name": "India CBSE Class 12 Business Studies — 2024",
+    "url": "https://cbseacademic.nic.in/",
+    "subject": "Business Studies",
+    "level": "Class 12",
+    "country": "India"
+  },
+  {
+    "name": "India CBSE Class 12 Literature — 2024",
+    "url": "https://cbseacademic.nic.in/",
+    "subject": "Literature",
+    "level": "Class 12",
+    "country": "India"
+  },
+  {
+    "name": "United Kingdom GCSE Mathematics — 2024",
+    "url": "https://www.aqa.org.uk/find-past-papers-and-mark-schemes",
+    "subject": "Mathematics",
+    "level": "GCSE",
+    "country": "United Kingdom"
+  },
+  {
+    "name": "United Kingdom GCSE Physics — 2024",
+    "url": "https://www.aqa.org.uk/find-past-papers-and-mark-schemes",
+    "subject": "Physics",
+    "level": "GCSE",
+    "country": "United Kingdom"
+  },
+  {
+    "name": "United Kingdom GCSE Chemistry — 2024",
+    "url": "https://www.aqa.org.uk/find-past-papers-and-mark-schemes",
+    "subject": "Chemistry",
+    "level": "GCSE",
+    "country": "United Kingdom"
+  },
+  {
+    "name": "United Kingdom GCSE Biology — 2024",
+    "url": "https://www.aqa.org.uk/find-past-papers-and-mark-schemes",
+    "subject": "Biology",
+    "level": "GCSE",
+    "country": "United Kingdom"
+  },
+  {
+    "name": "United Kingdom GCSE English — 2024",
+    "url": "https://www.aqa.org.uk/find-past-papers-and-mark-schemes",
+    "subject": "English",
+    "level": "GCSE",
+    "country": "United Kingdom"
+  },
+  {
+    "name": "United Kingdom GCSE Economics — 2024",
+    "url": "https://www.aqa.org.uk/find-past-papers-and-mark-schemes",
+    "subject": "Economics",
+    "level": "GCSE",
+    "country": "United Kingdom"
+  },
+  {
+    "name": "United Kingdom GCSE Computer Science — 2024",
+    "url": "https://www.aqa.org.uk/find-past-papers-and-mark-schemes",
+    "subject": "Computer Science",
+    "level": "GCSE",
+    "country": "United Kingdom"
+  },
+  {
+    "name": "United Kingdom GCSE Geography — 2024",
+    "url": "https://www.aqa.org.uk/find-past-papers-and-mark-schemes",
+    "subject": "Geography",
+    "level": "GCSE",
+    "country": "United Kingdom"
+  },
+  {
+    "name": "United Kingdom GCSE History — 2024",
+    "url": "https://www.aqa.org.uk/find-past-papers-and-mark-schemes",
+    "subject": "History",
+    "level": "GCSE",
+    "country": "United Kingdom"
+  },
+  {
+    "name": "United Kingdom GCSE Accounting — 2024",
+    "url": "https://www.aqa.org.uk/find-past-papers-and-mark-schemes",
+    "subject": "Accounting",
+    "level": "GCSE",
+    "country": "United Kingdom"
+  },
+  {
+    "name": "United Kingdom GCSE Business Studies — 2024",
+    "url": "https://www.aqa.org.uk/find-past-papers-and-mark-schemes",
+    "subject": "Business Studies",
+    "level": "GCSE",
+    "country": "United Kingdom"
+  },
+  {
+    "name": "United Kingdom GCSE Literature — 2024",
+    "url": "https://www.aqa.org.uk/find-past-papers-and-mark-schemes",
+    "subject": "Literature",
+    "level": "GCSE",
+    "country": "United Kingdom"
+  },
+  {
+    "name": "United States AP Calculus AB — 2024",
+    "url": "https://apcentral.collegeboard.org/courses/ap-calculus-ab",
+    "subject": "Mathematics",
+    "level": "AP",
+    "country": "United States"
+  },
+  {
+    "name": "United States AP Physics 1 — 2024",
+    "url": "https://apcentral.collegeboard.org/courses/ap-physics-1",
+    "subject": "Physics",
+    "level": "AP",
+    "country": "United States"
+  },
+  {
+    "name": "United States AP Chemistry — 2024",
+    "url": "https://apcentral.collegeboard.org/courses/ap-chemistry",
+    "subject": "Chemistry",
+    "level": "AP",
+    "country": "United States"
+  },
+  {
+    "name": "United States AP Biology — 2024",
+    "url": "https://apcentral.collegeboard.org/courses/ap-biology",
+    "subject": "Biology",
+    "level": "AP",
+    "country": "United States"
+  },
+  {
+    "name": "United States AP English Language — 2024",
+    "url": "https://apcentral.collegeboard.org/courses/ap-english-language-and-composition",
+    "subject": "English",
+    "level": "AP",
+    "country": "United States"
+  },
+  {
+    "name": "United States AP Macroeconomics — 2024",
+    "url": "https://apcentral.collegeboard.org/courses/ap-macroeconomics",
+    "subject": "Economics",
+    "level": "AP",
+    "country": "United States"
+  },
+  {
+    "name": "United States AP Computer Science A — 2024",
+    "url": "https://apcentral.collegeboard.org/courses/ap-computer-science-a",
+    "subject": "Computer Science",
+    "level": "AP",
+    "country": "United States"
+  },
+  {
+    "name": "United States AP Human Geography — 2024",
+    "url": "https://apcentral.collegeboard.org/courses/ap-human-geography",
+    "subject": "Geography",
+    "level": "AP",
+    "country": "United States"
+  },
+  {
+    "name": "United States AP US History — 2024",
+    "url": "https://apcentral.collegeboard.org/courses/ap-united-states-history",
+    "subject": "History",
+    "level": "AP",
+    "country": "United States"
+  },
+  {
+    "name": "United States AP Microeconomics — 2024",
+    "url": "https://apcentral.collegeboard.org/courses/ap-microeconomics",
+    "subject": "Economics",
+    "level": "AP",
+    "country": "United States"
+  },
+  {
+    "name": "United States AP Computer Science Principles — 2024",
+    "url": "https://apcentral.collegeboard.org/courses/ap-computer-science-principles",
+    "subject": "Computer Science",
+    "level": "AP",
+    "country": "United States"
+  },
+  {
+    "name": "United States AP English Literature — 2024",
+    "url": "https://apcentral.collegeboard.org/courses/ap-english-literature-and-composition",
+    "subject": "Literature",
+    "level": "AP",
+    "country": "United States"
+  },
+  {
+    "name": "Australia HSC Mathematics Advanced — 2024",
+    "url": "https://educationstandards.nsw.edu.au/wps/portal/nesa/11-12/hsc/hsc-exam-papers",
+    "subject": "Mathematics",
+    "level": "HSC",
+    "country": "Australia"
+  },
+  {
+    "name": "Australia HSC Physics — 2024",
+    "url": "https://educationstandards.nsw.edu.au/wps/portal/nesa/11-12/hsc/hsc-exam-papers",
+    "subject": "Physics",
+    "level": "HSC",
+    "country": "Australia"
+  },
+  {
+    "name": "Australia HSC Chemistry — 2024",
+    "url": "https://educationstandards.nsw.edu.au/wps/portal/nesa/11-12/hsc/hsc-exam-papers",
+    "subject": "Chemistry",
+    "level": "HSC",
+    "country": "Australia"
+  },
+  {
+    "name": "Australia HSC Biology — 2024",
+    "url": "https://educationstandards.nsw.edu.au/wps/portal/nesa/11-12/hsc/hsc-exam-papers",
+    "subject": "Biology",
+    "level": "HSC",
+    "country": "Australia"
+  },
+  {
+    "name": "Australia HSC English Advanced — 2024",
+    "url": "https://educationstandards.nsw.edu.au/wps/portal/nesa/11-12/hsc/hsc-exam-papers",
+    "subject": "English",
+    "level": "HSC",
+    "country": "Australia"
+  },
+  {
+    "name": "Australia HSC Economics — 2024",
+    "url": "https://educationstandards.nsw.edu.au/wps/portal/nesa/11-12/hsc/hsc-exam-papers",
+    "subject": "Economics",
+    "level": "HSC",
+    "country": "Australia"
+  },
+  {
+    "name": "Australia HSC Computer Science — 2024",
+    "url": "https://educationstandards.nsw.edu.au/wps/portal/nesa/11-12/hsc/hsc-exam-papers",
+    "subject": "Computer Science",
+    "level": "HSC",
+    "country": "Australia"
+  },
+  {
+    "name": "Australia HSC Geography — 2024",
+    "url": "https://educationstandards.nsw.edu.au/wps/portal/nesa/11-12/hsc/hsc-exam-papers",
+    "subject": "Geography",
+    "level": "HSC",
+    "country": "Australia"
+  },
+  {
+    "name": "Australia HSC History — 2024",
+    "url": "https://educationstandards.nsw.edu.au/wps/portal/nesa/11-12/hsc/hsc-exam-papers",
+    "subject": "History",
+    "level": "HSC",
+    "country": "Australia"
+  },
+  {
+    "name": "Australia HSC Accounting — 2024",
+    "url": "https://educationstandards.nsw.edu.au/wps/portal/nesa/11-12/hsc/hsc-exam-papers",
+    "subject": "Accounting",
+    "level": "HSC",
+    "country": "Australia"
+  },
+  {
+    "name": "Australia HSC Business Studies — 2024",
+    "url": "https://educationstandards.nsw.edu.au/wps/portal/nesa/11-12/hsc/hsc-exam-papers",
+    "subject": "Business Studies",
+    "level": "HSC",
+    "country": "Australia"
+  },
+  {
+    "name": "Australia HSC Literature — 2024",
+    "url": "https://educationstandards.nsw.edu.au/wps/portal/nesa/11-12/hsc/hsc-exam-papers",
+    "subject": "Literature",
+    "level": "HSC",
+    "country": "Australia"
+  },
+  {
+    "name": "Pakistan Intermediate Mathematics — 2024",
+    "url": "https://www.biselahore.com/",
+    "subject": "Mathematics",
+    "level": "Intermediate",
+    "country": "Pakistan"
+  },
+  {
+    "name": "Pakistan Intermediate Physics — 2024",
+    "url": "https://www.biselahore.com/",
+    "subject": "Physics",
+    "level": "Intermediate",
+    "country": "Pakistan"
+  },
+  {
+    "name": "Pakistan Intermediate Chemistry — 2024",
+    "url": "https://www.biselahore.com/",
+    "subject": "Chemistry",
+    "level": "Intermediate",
+    "country": "Pakistan"
+  },
+  {
+    "name": "Pakistan Intermediate Biology — 2024",
+    "url": "https://www.biselahore.com/",
+    "subject": "Biology",
+    "level": "Intermediate",
+    "country": "Pakistan"
+  },
+  {
+    "name": "Pakistan Intermediate English — 2024",
+    "url": "https://www.biselahore.com/",
+    "subject": "English",
+    "level": "Intermediate",
+    "country": "Pakistan"
+  },
+  {
+    "name": "Pakistan Intermediate Economics — 2024",
+    "url": "https://www.biselahore.com/",
+    "subject": "Economics",
+    "level": "Intermediate",
+    "country": "Pakistan"
+  },
+  {
+    "name": "Pakistan Intermediate Computer Science — 2024",
+    "url": "https://www.biselahore.com/",
+    "subject": "Computer Science",
+    "level": "Intermediate",
+    "country": "Pakistan"
+  },
+  {
+    "name": "Pakistan Intermediate Geography — 2024",
+    "url": "https://www.biselahore.com/",
+    "subject": "Geography",
+    "level": "Intermediate",
+    "country": "Pakistan"
+  },
+  {
+    "name": "Pakistan Intermediate History — 2024",
+    "url": "https://www.biselahore.com/",
+    "subject": "History",
+    "level": "Intermediate",
+    "country": "Pakistan"
+  },
+  {
+    "name": "Pakistan Intermediate Accounting — 2024",
+    "url": "https://www.biselahore.com/",
+    "subject": "Accounting",
+    "level": "Intermediate",
+    "country": "Pakistan"
+  },
+  {
+    "name": "Pakistan Intermediate Business Studies — 2024",
+    "url": "https://www.biselahore.com/",
+    "subject": "Business Studies",
+    "level": "Intermediate",
+    "country": "Pakistan"
+  },
+  {
+    "name": "Pakistan Intermediate Literature — 2024",
+    "url": "https://www.biselahore.com/",
+    "subject": "Literature",
+    "level": "Intermediate",
+    "country": "Pakistan"
   }
 ]
