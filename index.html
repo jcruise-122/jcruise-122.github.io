@@ -120,6 +120,24 @@
             text-decoration: none;
         }
 
+        .paper-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+        }
+
+        .paper-item {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .paper-item h3 {
+            color: #0b3d91;
+            margin-bottom: 12px;
+        }
+
         .payment {
             background: #0b3d91;
             color: white;
@@ -193,7 +211,7 @@
         <div class="card">
             <h3>🇿🇲 Zambia</h3>
             <p>ECZ past papers and educational resources.</p>
-            <a href="#" class="button">View Papers</a>
+            <a href="#zambia-papers" class="button">View Papers</a>
         </div>
 
         <div class="card">
@@ -216,6 +234,13 @@
 
     </div>
 
+</section>
+
+<section class="container" id="zambia-papers">
+    <h2 class="section-title">🇿🇲 Zambia Maths Past Papers</h2>
+    <div class="paper-list" id="zambia-paper-list" aria-live="polite">
+        <p>Loading Zambia past papers…</p>
+    </div>
 </section>
 
 <section class="container" id="universities">
@@ -331,4 +356,4 @@
 <!-- END QUIZ SECTION -->
 <script src="script.js"></script>
 </body>
-  </html>
+</html>
