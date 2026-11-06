@@ -308,7 +308,7 @@
     "country": "Australia"
   },
   {
-    "name": "HSC Biology ��� 2024",
+    "name": "HSC Biology — 2024",
     "url": "https://educationstandards.nsw.edu.au/wps/portal/nesa/11-12/hsc/hsc-exam-papers",
     "subject": "Biology",
     "level": "HSC",
@@ -355,5 +355,26 @@
     "subject": "Biology",
     "level": "Intermediate",
     "country": "Pakistan"
+  },
+  {
+    "name": "Cybersecurity",
+    "url": "https://github.com/M-F-Tushar/Google-Cybersecurity-Professional-Certificate",
+    "subject": "Cybersecurity",
+    "level": "Beginner",
+    "country": "Online"
+  },
+  {
+    "name": "30 Days of Python",
+    "url": "https://github.com/Asabeneh/30-Days-Of-Python",
+    "subject": "Python Programming",
+    "level": "Beginner",
+    "country": "Online"
+  },
+  {
+    "name": "C++",
+    "url": "https://github.com/dvdbisong/CplusTutorial/tree/master/1.%20pdf%20notes",
+    "subject": "C++ Programming",
+    "level": "Beginner",
+    "country": "Online"
   }
 ]
