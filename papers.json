@@ -1,5 +1,250 @@
 [
   {
+    "name": "AP Biology — 2024",
+    "url": "https://apcentral.collegeboard.org/courses/ap-biology",
+    "subject": "Biology",
+    "level": "AP",
+    "country": "United States"
+  },
+  {
+    "name": "HSC Biology — 2024",
+    "url": "https://educationstandards.nsw.edu.au/wps/portal/nesa/11-12/hsc/hsc-exam-papers",
+    "subject": "Biology",
+    "level": "HSC",
+    "country": "Australia"
+  },
+  {
+    "name": "WASSCE Biology — 2024",
+    "url": "https://www.waecgh.org/",
+    "subject": "Biology",
+    "level": "WASSCE",
+    "country": "Ghana"
+  },
+  {
+    "name": "KCSE Biology — 2024",
+    "url": "https://www.knec.ac.ke/",
+    "subject": "Biology",
+    "level": "KCSE",
+    "country": "Kenya"
+  },
+  {
+    "name": "NSC Grade 12 Biology — 2024",
+    "url": "https://www.education.gov.za/",
+    "subject": "Biology",
+    "level": "Grade 12",
+    "country": "South Africa"
+  },
+  {
+    "name": "Grade 12 Biology — 2024 GCE",
+    "url": "https://www.exams-council.org.zm/grade-12/",
+    "subject": "Biology",
+    "level": "Grade 12",
+    "country": "Zambia"
+  },
+  {
+    "name": "AP Chemistry — 2024",
+    "url": "https://apcentral.collegeboard.org/courses/ap-chemistry",
+    "subject": "Chemistry",
+    "level": "AP",
+    "country": "United States"
+  },
+  {
+    "name": "HSC Chemistry — 2024",
+    "url": "https://educationstandards.nsw.edu.au/wps/portal/nesa/11-12/hsc/hsc-exam-papers",
+    "subject": "Chemistry",
+    "level": "HSC",
+    "country": "Australia"
+  },
+  {
+    "name": "WASSCE Chemistry — 2024",
+    "url": "https://www.waecgh.org/",
+    "subject": "Chemistry",
+    "level": "WASSCE",
+    "country": "Ghana"
+  },
+  {
+    "name": "KCSE Chemistry — 2024",
+    "url": "https://www.knec.ac.ke/",
+    "subject": "Chemistry",
+    "level": "KCSE",
+    "country": "Kenya"
+  },
+  {
+    "name": "Intermediate Chemistry — 2024",
+    "url": "https://www.biselahore.com/",
+    "subject": "Chemistry",
+    "level": "Intermediate",
+    "country": "Pakistan"
+  },
+  {
+    "name": "NSC Grade 12 Chemistry — 2024",
+    "url": "https://www.education.gov.za/",
+    "subject": "Chemistry",
+    "level": "Grade 12",
+    "country": "South Africa"
+  },
+  {
+    "name": "Grade 12 Chemistry — 2024 GCE",
+    "url": "https://www.exams-council.org.zm/grade-12/",
+    "subject": "Chemistry",
+    "level": "Grade 12",
+    "country": "Zambia"
+  },
+  {
+    "name": "C++",
+    "url": "https://github.com/dvdbisong/CplusTutorial/tree/master/1.%20pdf%20notes",
+    "subject": "C++ Programming",
+    "level": "Beginner",
+    "country": "Online"
+  },
+  {
+    "name": "Grade 12 Computer Studies — ECZ GCE",
+    "url": "https://www.exams-council.org.zm/grade-12/",
+    "subject": "Computer Studies",
+    "level": "Grade 12",
+    "country": "Zambia"
+  },
+  {
+    "name": "Cybersecurity",
+    "url": "https://github.com/M-F-Tushar/Google-Cybersecurity-Professional-Certificate",
+    "subject": "Cybersecurity",
+    "level": "Beginner",
+    "country": "Online"
+  },
+  {
+    "name": "HSC English Advanced — 2024",
+    "url": "https://educationstandards.nsw.edu.au/wps/portal/nesa/11-12/hsc/hsc-exam-papers",
+    "subject": "English Advanced",
+    "level": "HSC",
+    "country": "Australia"
+  },
+  {
+    "name": "KCSE English — 2024",
+    "url": "https://www.knec.ac.ke/",
+    "subject": "English",
+    "level": "KCSE",
+    "country": "Kenya"
+  },
+  {
+    "name": "NSC Grade 12 English — 2024",
+    "url": "https://www.education.gov.za/",
+    "subject": "English",
+    "level": "Grade 12",
+    "country": "South Africa"
+  },
+  {
+    "name": "AP English Language and Composition — 2024",
+    "url": "https://apcentral.collegeboard.org/courses/ap-english-language-and-composition",
+    "subject": "English Language",
+    "level": "AP",
+    "country": "United States"
+  },
+  {
+    "name": "GCSE English Language — 2024",
+    "url": "https://www.aqa.org.uk/find-past-papers-and-mark-schemes",
+    "subject": "English Language",
+    "level": "GCSE",
+    "country": "United Kingdom"
+  },
+  {
+    "name": "Grade 9 English Language — ECZ",
+    "url": "https://www.exams-council.org.zm/",
+    "subject": "English Language",
+    "level": "Grade 9",
+    "country": "Zambia"
+  },
+  {
+    "name": "Grade 12 English Language — ECZ GCE",
+    "url": "https://www.exams-council.org.zm/grade-12/",
+    "subject": "English Language",
+    "level": "Grade 12",
+    "country": "Zambia"
+  },
+  {
+    "name": "GCSE Geography — 2024",
+    "url": "https://www.aqa.org.uk/find-past-papers-and-mark-schemes",
+    "subject": "Geography",
+    "level": "GCSE",
+    "country": "United Kingdom"
+  },
+  {
+    "name": "Grade 12 Geography — ECZ GCE",
+    "url": "https://www.exams-council.org.zm/grade-12/",
+    "subject": "Geography",
+    "level": "Grade 12",
+    "country": "Zambia"
+  },
+  {
+    "name": "Grade 9 Integrated Science — ECZ",
+    "url": "https://www.exams-council.org.zm/",
+    "subject": "Integrated Science",
+    "level": "Grade 9",
+    "country": "Zambia"
+  },
+  {
+    "name": "AP Calculus AB — 2024",
+    "url": "https://apcentral.collegeboard.org/courses/ap-calculus-ab",
+    "subject": "Mathematics",
+    "level": "AP",
+    "country": "United States"
+  },
+  {
+    "name": "HSC Mathematics Advanced — 2024",
+    "url": "https://educationstandards.nsw.edu.au/wps/portal/nesa/11-12/hsc/hsc-exam-papers",
+    "subject": "Mathematics",
+    "level": "HSC",
+    "country": "Australia"
+  },
+  {
+    "name": "WASSCE Mathematics — 2024",
+    "url": "https://www.waecgh.org/",
+    "subject": "Mathematics",
+    "level": "WASSCE",
+    "country": "Ghana"
+  },
+  {
+    "name": "KCSE Mathematics — 2024",
+    "url": "https://www.knec.ac.ke/",
+    "subject": "Mathematics",
+    "level": "KCSE",
+    "country": "Kenya"
+  },
+  {
+    "name": "Intermediate Mathematics — 2024",
+    "url": "https://www.biselahore.com/",
+    "subject": "Mathematics",
+    "level": "Intermediate",
+    "country": "Pakistan"
+  },
+  {
+    "name": "Grade 12 Mathematics — 2024 NSC",
+    "url": "https://www.education.gov.za/",
+    "subject": "Mathematics",
+    "level": "Grade 12",
+    "country": "South Africa"
+  },
+  {
+    "name": "GCSE Mathematics — 2024",
+    "url": "https://www.aqa.org.uk/find-past-papers-and-mark-schemes",
+    "subject": "Mathematics",
+    "level": "GCSE",
+    "country": "United Kingdom"
+  },
+  {
+    "name": "Grade 9 Mathematics — ECZ",
+    "url": "https://www.exams-council.org.zm/",
+    "subject": "Mathematics",
+    "level": "Grade 9",
+    "country": "Zambia"
+  },
+  {
+    "name": "Grade 12 Mathematics — 2023 Paper 2 (ECZ)",
+    "url": "https://eczpastpapers.com/4024-2-2023-mathematics-paper-2/",
+    "subject": "Mathematics",
+    "level": "Grade 12",
+    "country": "Zambia"
+  },
+  {
     "name": "Grade 12 Mathematics — 2024 P1 GCE",
     "url": "https://raw.githubusercontent.com/jcruise-122/jcruise-122.github.io/main/2024%20P1%20GCE%20%286%29.pdf",
     "subject": "Mathematics",
@@ -14,11 +259,67 @@
     "country": "Zambia"
   },
   {
-    "name": "Grade 12 Mathematics — 2023 Paper 2 (ECZ)",
-    "url": "https://eczpastpapers.com/4024-2-2023-mathematics-paper-2/",
-    "subject": "Mathematics",
+    "name": "30 Days of Python",
+    "url": "https://github.com/Asabeneh/30-Days-Of-Python",
+    "subject": "Python Programming",
+    "level": "Beginner",
+    "country": "Online"
+  },
+  {
+    "name": "AP Physics 1 — 2024",
+    "url": "https://apcentral.collegeboard.org/courses/ap-physics-1",
+    "subject": "Physics",
+    "level": "AP",
+    "country": "United States"
+  },
+  {
+    "name": "HSC Physics — 2024",
+    "url": "https://educationstandards.nsw.edu.au/wps/portal/nesa/11-12/hsc/hsc-exam-papers",
+    "subject": "Physics",
+    "level": "HSC",
+    "country": "Australia"
+  },
+  {
+    "name": "WASSCE Physics — 2024",
+    "url": "https://www.waecgh.org/",
+    "subject": "Physics",
+    "level": "WASSCE",
+    "country": "Ghana"
+  },
+  {
+    "name": "KCSE Physics — 2024",
+    "url": "https://www.knec.ac.ke/",
+    "subject": "Physics",
+    "level": "KCSE",
+    "country": "Kenya"
+  },
+  {
+    "name": "Intermediate Physics — 2024",
+    "url": "https://www.biselahore.com/",
+    "subject": "Physics",
+    "level": "Intermediate",
+    "country": "Pakistan"
+  },
+  {
+    "name": "Grade 12 Physics — 2024 NSC",
+    "url": "https://www.education.gov.za/",
+    "subject": "Physics",
     "level": "Grade 12",
-    "country": "Zambia"
+    "country": "South Africa"
+  },
+  {
+    "name": "GCSE Physics — 2024",
+    "url": "https://www.aqa.org.uk/find-past-papers-and-mark-schemes",
+    "subject": "Physics",
+    "level": "GCSE",
+    "country": "United Kingdom"
+  },
+  {
+    "name": "WAEC Physics — 2024 SSCE",
+    "url": "https://www.waecdirect.org/",
+    "subject": "Physics",
+    "level": "SSCE",
+    "country": "Nigeria"
   },
   {
     "name": "Grade 12 Physics — 2024 GCE",
@@ -28,30 +329,16 @@
     "country": "Zambia"
   },
   {
-    "name": "Grade 12 Chemistry — 2024 GCE",
-    "url": "https://www.exams-council.org.zm/grade-12/",
-    "subject": "Chemistry",
-    "level": "Grade 12",
-    "country": "Zambia"
+    "name": "AP Statistics — 2024",
+    "url": "https://apcentral.collegeboard.org/courses/ap-statistics",
+    "subject": "Statistics",
+    "level": "AP",
+    "country": "United States"
   },
   {
-    "name": "Grade 12 Biology — 2024 GCE",
-    "url": "https://www.exams-council.org.zm/grade-12/",
+    "name": "WAEC Biology — 2024 SSCE",
+    "url": "https://www.waecdirect.org/",
     "subject": "Biology",
-    "level": "Grade 12",
-    "country": "Zambia"
-  },
-  {
-    "name": "WAEC Mathematics — 2024 SSCE",
-    "url": "https://www.waecdirect.org/",
-    "subject": "Mathematics",
-    "level": "SSCE",
-    "country": "Nigeria"
-  },
-  {
-    "name": "WAEC Physics — 2024 SSCE",
-    "url": "https://www.waecdirect.org/",
-    "subject": "Physics",
     "level": "SSCE",
     "country": "Nigeria"
   },
@@ -63,235 +350,11 @@
     "country": "Nigeria"
   },
   {
-    "name": "WAEC Biology — 2024 SSCE",
+    "name": "WAEC Mathematics — 2024 SSCE",
     "url": "https://www.waecdirect.org/",
-    "subject": "Biology",
+    "subject": "Mathematics",
     "level": "SSCE",
     "country": "Nigeria"
-  },
-  {
-    "name": "WASSCE Mathematics — 2024",
-    "url": "https://www.waecgh.org/",
-    "subject": "Mathematics",
-    "level": "WASSCE",
-    "country": "Ghana"
-  },
-  {
-    "name": "WASSCE Physics — 2024",
-    "url": "https://www.waecgh.org/",
-    "subject": "Physics",
-    "level": "WASSCE",
-    "country": "Ghana"
-  },
-  {
-    "name": "WASSCE Chemistry — 2024",
-    "url": "https://www.waecgh.org/",
-    "subject": "Chemistry",
-    "level": "WASSCE",
-    "country": "Ghana"
-  },
-  {
-    "name": "WASSCE Biology — 2024",
-    "url": "https://www.waecgh.org/",
-    "subject": "Biology",
-    "level": "WASSCE",
-    "country": "Ghana"
-  },
-  {
-    "name": "Grade 12 Mathematics — 2024 NSC",
-    "url": "https://www.education.gov.za/",
-    "subject": "Mathematics",
-    "level": "Grade 12",
-    "country": "South Africa"
-  },
-  {
-    "name": "Grade 12 Physics — 2024 NSC",
-    "url": "https://www.education.gov.za/",
-    "subject": "Physics",
-    "level": "Grade 12",
-    "country": "South Africa"
-  },
-  {
-    "name": "KCSE Mathematics — 2024",
-    "url": "https://www.knec.ac.ke/",
-    "subject": "Mathematics",
-    "level": "KCSE",
-    "country": "Kenya"
-  },
-  {
-    "name": "KCSE Physics — 2024",
-    "url": "https://www.knec.ac.ke/",
-    "subject": "Physics",
-    "level": "KCSE",
-    "country": "Kenya"
-  },
-  {
-    "name": "GCSE Mathematics — 2024",
-    "url": "https://www.aqa.org.uk/find-past-papers-and-mark-schemes",
-    "subject": "Mathematics",
-    "level": "GCSE",
-    "country": "United Kingdom"
-  },
-  {
-    "name": "GCSE Physics — 2024",
-    "url": "https://www.aqa.org.uk/find-past-papers-and-mark-schemes",
-    "subject": "Physics",
-    "level": "GCSE",
-    "country": "United Kingdom"
-  },
-  {
-    "name": "AP Calculus AB — 2024",
-    "url": "https://apcentral.collegeboard.org/courses/ap-calculus-ab",
-    "subject": "Mathematics",
-    "level": "AP",
-    "country": "United States"
-  },
-  {
-    "name": "AP Physics 1 — 2024",
-    "url": "https://apcentral.collegeboard.org/courses/ap-physics-1",
-    "subject": "Physics",
-    "level": "AP",
-    "country": "United States"
-  },
-  {
-    "name": "HSC Mathematics Advanced — 2024",
-    "url": "https://educationstandards.nsw.edu.au/wps/portal/nesa/11-12/hsc/hsc-exam-papers",
-    "subject": "Mathematics",
-    "level": "HSC",
-    "country": "Australia"
-  },
-  {
-    "name": "HSC Physics — 2024",
-    "url": "https://educationstandards.nsw.edu.au/wps/portal/nesa/11-12/hsc/hsc-exam-papers",
-    "subject": "Physics",
-    "level": "HSC",
-    "country": "Australia"
-  },
-  {
-    "name": "Intermediate Mathematics — 2024",
-    "url": "https://www.biselahore.com/",
-    "subject": "Mathematics",
-    "level": "Intermediate",
-    "country": "Pakistan"
-  },
-  {
-    "name": "Intermediate Physics — 2024",
-    "url": "https://www.biselahore.com/",
-    "subject": "Physics",
-    "level": "Intermediate",
-    "country": "Pakistan"
-  },
-  {
-    "name": "Grade 9 Mathematics — ECZ",
-    "url": "https://www.exams-council.org.zm/",
-    "subject": "Mathematics",
-    "level": "Grade 9",
-    "country": "Zambia"
-  },
-  {
-    "name": "Grade 9 English Language — ECZ",
-    "url": "https://www.exams-council.org.zm/",
-    "subject": "English Language",
-    "level": "Grade 9",
-    "country": "Zambia"
-  },
-  {
-    "name": "Grade 9 Integrated Science — ECZ",
-    "url": "https://www.exams-council.org.zm/",
-    "subject": "Integrated Science",
-    "level": "Grade 9",
-    "country": "Zambia"
-  },
-  {
-    "name": "Grade 12 English Language — ECZ GCE",
-    "url": "https://www.exams-council.org.zm/grade-12/",
-    "subject": "English Language",
-    "level": "Grade 12",
-    "country": "Zambia"
-  },
-  {
-    "name": "Grade 12 Geography — ECZ GCE",
-    "url": "https://www.exams-council.org.zm/grade-12/",
-    "subject": "Geography",
-    "level": "Grade 12",
-    "country": "Zambia"
-  },
-  {
-    "name": "Grade 12 Computer Studies — ECZ GCE",
-    "url": "https://www.exams-council.org.zm/grade-12/",
-    "subject": "Computer Studies",
-    "level": "Grade 12",
-    "country": "Zambia"
-  },
-  {
-    "name": "KCSE Chemistry — 2024",
-    "url": "https://www.knec.ac.ke/",
-    "subject": "Chemistry",
-    "level": "KCSE",
-    "country": "Kenya"
-  },
-  {
-    "name": "KCSE Biology — 2024",
-    "url": "https://www.knec.ac.ke/",
-    "subject": "Biology",
-    "level": "KCSE",
-    "country": "Kenya"
-  },
-  {
-    "name": "KCSE English — 2024",
-    "url": "https://www.knec.ac.ke/",
-    "subject": "English",
-    "level": "KCSE",
-    "country": "Kenya"
-  },
-  {
-    "name": "GCSE Chemistry — 2024",
-    "url": "https://www.aqa.org.uk/find-past-papers-and-mark-schemes",
-    "subject": "Chemistry",
-    "level": "GCSE",
-    "country": "United Kingdom"
-  },
-  {
-    "name": "GCSE Biology — 2024",
-    "url": "https://www.aqa.org.uk/find-past-papers-and-mark-schemes",
-    "subject": "Biology",
-    "level": "GCSE",
-    "country": "United Kingdom"
-  },
-  {
-    "name": "GCSE English Language — 2024",
-    "url": "https://www.aqa.org.uk/find-past-papers-and-mark-schemes",
-    "subject": "English Language",
-    "level": "GCSE",
-    "country": "United Kingdom"
-  },
-  {
-    "name": "GCSE Geography — 2024",
-    "url": "https://www.aqa.org.uk/find-past-papers-and-mark-schemes",
-    "subject": "Geography",
-    "level": "GCSE",
-    "country": "United Kingdom"
-  },
-  {
-    "name": "AP Chemistry — 2024",
-    "url": "https://apcentral.collegeboard.org/courses/ap-chemistry",
-    "subject": "Chemistry",
-    "level": "AP",
-    "country": "United States"
-  },
-  {
-    "name": "AP Biology — 2024",
-    "url": "https://apcentral.collegeboard.org/courses/ap-biology",
-    "subject": "Biology",
-    "level": "AP",
-    "country": "United States"
-  },
-  {
-    "name": "AP Statistics — 2024",
-    "url": "https://apcentral.collegeboard.org/courses/ap-statistics",
-    "subject": "Statistics",
-    "level": "AP",
-    "country": "United States"
   },
   {
     "name": "AP English Language and Composition — 2024",
@@ -301,80 +364,17 @@
     "country": "United States"
   },
   {
-    "name": "HSC Chemistry — 2024",
-    "url": "https://educationstandards.nsw.edu.au/wps/portal/nesa/11-12/hsc/hsc-exam-papers",
-    "subject": "Chemistry",
-    "level": "HSC",
-    "country": "Australia"
-  },
-  {
-    "name": "HSC Biology — 2024",
-    "url": "https://educationstandards.nsw.edu.au/wps/portal/nesa/11-12/hsc/hsc-exam-papers",
+    "name": "GCSE Biology — 2024",
+    "url": "https://www.aqa.org.uk/find-past-papers-and-mark-schemes",
     "subject": "Biology",
-    "level": "HSC",
-    "country": "Australia"
+    "level": "GCSE",
+    "country": "United Kingdom"
   },
   {
-    "name": "HSC English Advanced — 2024",
-    "url": "https://educationstandards.nsw.edu.au/wps/portal/nesa/11-12/hsc/hsc-exam-papers",
-    "subject": "English Advanced",
-    "level": "HSC",
-    "country": "Australia"
-  },
-  {
-    "name": "NSC Grade 12 Chemistry — 2024",
-    "url": "https://www.education.gov.za/",
+    "name": "GCSE Chemistry — 2024",
+    "url": "https://www.aqa.org.uk/find-past-papers-and-mark-schemes",
     "subject": "Chemistry",
-    "level": "Grade 12",
-    "country": "South Africa"
-  },
-  {
-    "name": "NSC Grade 12 Biology — 2024",
-    "url": "https://www.education.gov.za/",
-    "subject": "Biology",
-    "level": "Grade 12",
-    "country": "South Africa"
-  },
-  {
-    "name": "NSC Grade 12 English — 2024",
-    "url": "https://www.education.gov.za/",
-    "subject": "English",
-    "level": "Grade 12",
-    "country": "South Africa"
-  },
-  {
-    "name": "Intermediate Chemistry — 2024",
-    "url": "https://www.biselahore.com/",
-    "subject": "Chemistry",
-    "level": "Intermediate",
-    "country": "Pakistan"
-  },
-  {
-    "name": "Intermediate Biology — 2024",
-    "url": "https://www.biselahore.com/",
-    "subject": "Biology",
-    "level": "Intermediate",
-    "country": "Pakistan"
-  },
-  {
-    "name": "Cybersecurity",
-    "url": "https://github.com/M-F-Tushar/Google-Cybersecurity-Professional-Certificate",
-    "subject": "Cybersecurity",
-    "level": "Beginner",
-    "country": "Online"
-  },
-  {
-    "name": "30 Days of Python",
-    "url": "https://github.com/Asabeneh/30-Days-Of-Python",
-    "subject": "Python Programming",
-    "level": "Beginner",
-    "country": "Online"
-  },
-  {
-    "name": "C++",
-    "url": "https://github.com/dvdbisong/CplusTutorial/tree/master/1.%20pdf%20notes",
-    "subject": "C++ Programming",
-    "level": "Beginner",
-    "country": "Online"
+    "level": "GCSE",
+    "country": "United Kingdom"
   }
 ]
