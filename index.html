@@ -31,6 +31,10 @@
     #quiz-section { max-width: 1000px; margin: 30px auto; padding: 20px; }
     #quiz-section button { margin: 6px; padding: 10px 14px; cursor: pointer; }
     #quiz-section input { padding: 10px; max-width: 100%; }
+    .learning-resource { max-width: 1000px; margin: 30px auto; padding: 24px; border-radius: 12px; background: white; box-shadow: 0 3px 12px #00000012; }
+    .learning-resource h2 { color: #0b3d91; }
+    .learning-resource a { display: inline-block; padding: 10px 16px; border-radius: 6px; background: #0b3d91; color: white; text-decoration: none; font-weight: bold; }
+    .learning-resource a:hover { background: #082c6c; }
     footer { margin-top: 32px; }
     footer p { margin: 5px; }
     @media (max-width: 600px) { nav a { display: inline-block; margin: 5px; } .selector-panel { padding: 17px; } }
@@ -45,6 +49,7 @@
     <a href="#home">Home</a>
     <a href="#paper-finder">Find Papers</a>
     <a href="#answers">Explained Answers</a>
+    <a href="python-book.html">Learn Python</a>
   </nav>
   <section class="hero" id="home">
     <h2>Find Past Papers From Around the World</h2>
@@ -71,6 +76,11 @@
         <p id="selection-status" aria-live="polite">Select a country to begin. Papers will appear after you choose all three options.</p>
         <div id="paper-results" aria-live="polite" hidden></div>
       </div>
+    </section>
+    <section class="learning-resource" aria-labelledby="python-book-title">
+      <h2 id="python-book-title">Learn Python: Beginner to Advanced</h2>
+      <p>Start with your first program and progress through functions, files, classes, testing, algorithms, and concurrency with practical examples and exercises.</p>
+      <a href="python-book.html">Open the free Python book</a>
     </section>
     <section class="payment" id="answers">
       <h2>Need Explained Answers?</h2>

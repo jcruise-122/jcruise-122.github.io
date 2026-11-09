@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A practical, project-based Python course from your first program to advanced programming concepts.">
+  <title>Learn Python: Beginner to Advanced | Benes Papers</title>
+  <style>
+    :root { color-scheme: light; --navy: #082c6c; --blue: #0b3d91; --pale: #f4f7fc; --ink: #202b3c; --muted: #526174; --border: #dce5f2; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 20px; }
+    body { margin: 0; font: 16px/1.7 system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--ink); background: var(--pale); }
+    header { padding: 28px 18px; color: white; text-align: center; background: var(--navy); }
+    header a { color: #dbeafe; }
+    header h1 { margin: 8px 0; line-height: 1.2; }
+    header p { margin: 0; color: #e5edfb; }
+    .layout { display: grid; grid-template-columns: 250px minmax(0, 780px); gap: 28px; max-width: 1120px; margin: 28px auto; padding: 0 18px; align-items: start; }
+    nav { position: sticky; top: 16px; max-height: calc(100vh - 32px); overflow: auto; padding: 18px; border: 1px solid var(--border); border-radius: 12px; background: white; }
+    nav h2 { margin: 0 0 8px; font-size: 1.1rem; color: var(--navy); }
+    nav ol { margin: 0; padding-left: 22px; }
+    nav li { margin: 4px 0; }
+    a { color: var(--blue); }
+    main { min-width: 0; }
+    .intro, article, .endmatter { margin-bottom: 18px; padding: 24px; border: 1px solid var(--border); border-radius: 12px; background: white; box-shadow: 0 3px 12px #0000000a; }
+    h2, h3 { color: var(--navy); line-height: 1.3; }
+    h2 { margin-top: 0; }
+    h3 { margin-bottom: 8px; }
+    .tag { display: inline-block; padding: 2px 9px; border-radius: 99px; color: var(--blue); background: #eaf1ff; font-size: .85rem; font-weight: 700; }
+    pre { overflow-x: auto; padding: 16px; border-radius: 8px; color: #eef4ff; background: #14243b; font: .92rem/1.55 ui-monospace, SFMono-Regular, Consolas, monospace; }
+    code { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; }
+    :not(pre) > code { padding: 2px 5px; border-radius: 4px; background: #eef1f6; }
+    .callout { margin: 14px 0; padding: 12px 16px; border-left: 4px solid #2872ce; background: #f1f6ff; }
+    .exercise { margin-top: 14px; padding: 14px 16px; border: 1px dashed #9aacc5; border-radius: 8px; background: #fafcff; }
+    .exercise strong { color: var(--navy); }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; }
+    .grid > div { padding: 14px; border-radius: 8px; background: var(--pale); }
+    footer { padding: 24px; color: white; text-align: center; background: var(--navy); }
+    footer a { color: #dbeafe; }
+    @media (max-width: 800px) { .layout { grid-template-columns: 1fr; } nav { position: static; max-height: none; } nav ol { columns: 2; } }
+    @media (max-width: 480px) { nav ol { columns: 1; } .intro, article, .endmatter { padding: 18px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html">← Benes Papers home</a>
+    <h1>Learn Python: Beginner to Advanced</h1>
+    <p>A practical, project-based guide to writing clear, reliable Python programs.</p>
+  </header>
+  <div class="layout">
+    <nav aria-label="Book contents">
+      <h2>Contents</h2>
+      <ol>
+        <li><a href="#start">How to use this book</a></li>
+        <li><a href="#setup">Set up Python</a></li>
+        <li><a href="#first-program">Your first program</a></li>
+        <li><a href="#values">Values and variables</a></li>
+        <li><a href="#decisions">Decisions and loops</a></li>
+        <li><a href="#collections">Collections</a></li>
+        <li><a href="#functions">Functions</a></li>
+        <li><a href="#strings">Strings and formatting</a></li>
+        <li><a href="#files">Files and errors</a></li>
+        <li><a href="#modules">Modules and environments</a></li>
+        <li><a href="#objects">Classes and objects</a></li>
+        <li><a href="#idioms">Pythonic tools</a></li>
+        <li><a href="#typing">Types and data classes</a></li>
+        <li><a href="#testing">Testing and debugging</a></li>
+        <li><a href="#algorithms">Algorithms and complexity</a></li>
+        <li><a href="#concurrency">Concurrency basics</a></li>
+        <li><a href="#projects">Projects and next steps</a></li>
+      </ol>
+    </nav>
+    <main>
+      <section class="intro" id="start">
+        <span class="tag">Beginner → Intermediate → Advanced</span>
+        <h2>Welcome!</h2>
+        <p>Python is a general-purpose programming language used for automation, websites, science, data, and many other kinds of software. You do not need prior programming experience for this guide. Work through the chapters in order, type the examples yourself, and experiment with changing them.</p>
+        <h3>How to learn effectively</h3>
+        <ol>
+          <li>Write and run each example rather than only reading it.</li>
+          <li>Before running a program, predict what it will do.</li>
+          <li>When something breaks, read the last line of the error first, then inspect the line it names.</li>
+          <li>Do the exercises from memory, and build small projects between chapters.</li>
+        </ol>
+        <p><strong>Learning goal:</strong> by the end, you should be able to design, test, and explain small Python programs, and know what to study next. “Advanced” is a journey, so use the later chapters as a foundation for deeper practice.</p>
+      </section>
+
+      <article id="setup">
+        <h2>1. Set up Python</h2>
+        <p>Install a current Python 3 release from <a href="https://www.python.org/downloads/">python.org</a>, or use a trusted online Python editor if installation is not possible. On Windows, the launcher is often <code>py</code>; on macOS and Linux, use <code>python3</code>. Check your installation in a terminal:</p>
+        <pre><code>python3 --version</code></pre>
+        <p>Create a file named <code>hello.py</code>, then run it from that file’s folder with <code>python3 hello.py</code> (or <code>py hello.py</code> on Windows). A code editor makes writing easier, but a plain text editor is enough to start.</p>
+        <div class="callout"><strong>Important:</strong> use Python 3. The older Python 2 is no longer supported.</div>
+      </article>
+
+      <article id="first-program">
+        <h2>2. Your first program</h2>
+        <pre><code>print("Hello, world!")
+print("I am learning Python.")</code></pre>
+        <p><code>print()</code> displays information. Text goes inside quotation marks. Python runs statements from top to bottom. Lines beginning with <code>#</code> are comments for people reading the code:</p>
+        <pre><code># This is a comment
+print("Comments explain why code exists.")</code></pre>
+        <div class="exercise"><strong>Try it:</strong> print your name, a hobby, and one reason you want to learn programming.</div>
+      </article>
+
+      <article id="values">
+        <h2>3. Values, variables, and basic operations</h2>
+        <p>A variable is a name that refers to a value. Use descriptive names in <code>snake_case</code>.</p>
+        <pre><code>name = "Amina"       # str: text
+age = 16             # int: whole number
+height = 1.62        # float: decimal number
+is_learning = True   # bool: True or False
+
+print(name, age)
+print(age + 1)
+print(type(height))</code></pre>
+        <p>Common arithmetic operators are <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code> (division), <code>//</code> (floor division), <code>%</code> (remainder), and <code>**</code> (power). Use parentheses to make the order clear.</p>
+        <pre><code>total_minutes = 135
+hours = total_minutes // 60
+minutes = total_minutes % 60
+print(hours, "hours and", minutes, "minutes")</code></pre>
+        <p>Get user input with <code>input()</code>. It always returns text, so convert it before doing numeric calculations:</p>
+        <pre><code>age_text = input("How old are you? ")
+age = int(age_text)
+print("Next year you will be", age + 1)</code></pre>
+        <div class="exercise"><strong>Try it:</strong> ask for two numbers, convert them to <code>float</code>, and print their sum and product.</div>
+      </article>
+
+      <article id="decisions">
+        <h2>4. Decisions and loops</h2>
+        <p>Use <code>if</code>, <code>elif</code>, and <code>else</code> to choose what happens. Indentation is part of Python’s syntax—normally use four spaces.</p>
+        <pre><code>score = 72
+if score &gt;= 80:
+    print("Great work")
+elif score &gt;= 50:
+    print("Keep practicing")
+else:
+    print("Review the basics")</code></pre>
+        <p>Comparisons include <code>==</code>, <code>!=</code>, <code>&lt;</code>, <code>&lt;=</code>, <code>&gt;</code>, and <code>&gt;=</code>. Combine conditions with <code>and</code>, <code>or</code>, and <code>not</code>. A single <code>=</code> assigns a value; <code>==</code> compares two values.</p>
+        <p>A <code>for</code> loop visits items. <code>range(5)</code> produces 0 through 4. A <code>while</code> loop repeats while its condition is true.</p>
+        <pre><code>for number in range(1, 4):
+    print(number)
+
+countdown = 3
+while countdown &gt; 0:
+    print(countdown)
+    countdown -= 1
+print("Go!")</code></pre>
+        <p>Use <code>break</code> to leave a loop and <code>continue</code> to skip to its next iteration. Make sure a <code>while</code> loop can eventually stop.</p>
+        <div class="exercise"><strong>Try it:</strong> ask for a whole number and report whether it is positive, negative, or zero. Then print the multiplication table for that number.</div>
+      </article>
+
+      <article id="collections">
+        <h2>5. Collections: lists, tuples, dictionaries, and sets</h2>
+        <p>A <strong>list</strong> is an ordered, changeable collection. Positions start at index 0.</p>
+        <pre><code>colors = ["blue", "green", "gold"]
+print(colors[0])
+colors.append("red")
+colors[1] = "purple"
+print(len(colors))
+
+for color in colors:
+    print(color)</code></pre>
+        <p>A <strong>tuple</strong> is an ordered collection that is usually used for values that belong together and should not be changed. A <strong>set</strong> stores unique values and is useful for membership checks and removing duplicates.</p>
+        <pre><code>point = (4, 7)
+unique_numbers = {2, 2, 5, 7}
+print(unique_numbers)  # {2, 5, 7}</code></pre>
+        <p>A <strong>dictionary</strong> maps keys to values. Keys are commonly strings.</p>
+        <pre><code>student = {"name": "Amina", "score": 82}
+student["score"] = 88
+student["country"] = "Zambia"
+print(student.get("email", "No email recorded"))
+
+for key, value in student.items():
+    print(key, value)</code></pre>
+        <p>Choose a collection based on what you need: list for an ordered sequence, tuple for a fixed group, set for unique membership, and dictionary for looking up values by key.</p>
+        <div class="exercise"><strong>Try it:</strong> store three favorite books in a list and print them with numbers. Then create a dictionary for one book with its title, author, and year.</div>
+      </article>
+
+      <article id="functions">
+        <h2>6. Functions</h2>
+        <p>Functions package reusable work. Give them clear names, pass inputs as parameters, and return a result when appropriate.</p>
+        <pre><code>def rectangle_area(width, height):
+    """Return the area of a rectangle."""
+    return width * height
+
+area = rectangle_area(5, 3)
+print(area)</code></pre>
+        <p><code>return</code> sends a result back to the caller. If a function has no explicit <code>return</code>, it returns <code>None</code>. Parameters can have defaults:</p>
+        <pre><code>def greet(name, greeting="Hello"):
+    return f"{greeting}, {name}!"
+
+print(greet("Amina"))
+print(greet("Ben", greeting="Welcome"))</code></pre>
+        <p>Keep functions focused: one function should have one clear job. Variables created inside a function are local to it; pass information in instead of relying on hidden global state.</p>
+        <div class="exercise"><strong>Try it:</strong> write <code>is_even(number)</code> that returns <code>True</code> for even integers and <code>False</code> otherwise. Add a second function that uses it to count even numbers in a list.</div>
+      </article>
+
+      <article id="strings">
+        <h2>7. Strings and formatting</h2>
+        <p>Strings are text. They have useful methods, and they are immutable: methods return new strings rather than changing the original.</p>
+        <pre><code>message = "  Python is fun  "
+clean = message.strip()
+print(clean.lower())
+print(clean.upper())
+print(clean.replace("fun", "powerful"))
+print("Python" in clean)</code></pre>
+        <p>Use an f-string to place values into text cleanly:</p>
+        <pre><code>name = "Amina"
+score = 88
+print(f"{name} earned {score}%.")
+print(f"Half the score is {score / 2:.1f}.")</code></pre>
+        <p>Strings can be indexed and sliced much like lists: <code>word[0]</code> gets the first character, and <code>word[:3]</code> gets the first three characters.</p>
+        <div class="exercise"><strong>Try it:</strong> ask for a sentence and print its character count, uppercase version, and first word. Consider what should happen for empty input.</div>
+      </article>
+
+      <article id="files">
+        <h2>8. Files and errors</h2>
+        <p>Use <code>with</code> to open a file; it closes the file automatically, even if an error occurs. The example writes text to a file in the program’s current folder.</p>
+        <pre><code>with open("notes.txt", "w", encoding="utf-8") as file:
+    file.write("Python practice\n")
+
+with open("notes.txt", "r", encoding="utf-8") as file:
+    contents = file.read()
+
+print(contents)</code></pre>
+        <p>Modes include <code>"r"</code> (read), <code>"w"</code> (write and replace existing contents), and <code>"a"</code> (append). Handle expected errors specifically:</p>
+        <pre><code>try:
+    with open("scores.txt", encoding="utf-8") as file:
+        text = file.read()
+except FileNotFoundError:
+    print("The scores file does not exist yet.")</code></pre>
+        <p>Catch errors you can meaningfully handle. Avoid a bare <code>except:</code> that hides unrelated problems. For numeric input, catch <code>ValueError</code> if the user enters something that cannot be converted.</p>
+        <div class="exercise"><strong>Try it:</strong> create a small program that asks for a note, appends it to a text file, then reads and prints all saved notes.</div>
+      </article>
+
+      <article id="modules">
+        <h2>9. Modules, packages, and virtual environments</h2>
+        <p>A module is a Python file you can reuse. Import standard-library modules for common tools:</p>
+        <pre><code>import random
+
+secret = random.randint(1, 10)
+print(secret)</code></pre>
+        <p>Put your own reusable functions in another <code>.py</code> file and import them by filename (without the extension). For larger projects, use a virtual environment so project dependencies do not interfere with each other.</p>
+        <pre><code>python3 -m venv .venv
+# Activate it, then install packages with:
+python -m pip install package-name</code></pre>
+        <p>Activation differs by operating system: on macOS/Linux use <code>source .venv/bin/activate</code>; on Windows PowerShell use <code>.venv\Scripts\Activate.ps1</code>. To leave the environment, run <code>deactivate</code>. Do not install a package just because you can—first check whether the standard library already solves the problem.</p>
+      </article>
+
+      <article id="objects">
+        <h2>10. Classes and objects</h2>
+        <p>A class defines a kind of object that combines data and behavior. Use classes when they make a program’s concepts clearer; not every problem needs one.</p>
+        <pre><code>class BankAccount:
+    def __init__(self, owner, balance=0):
+        self.owner = owner
+        self.balance = balance
+
+    def deposit(self, amount):
+        if amount &lt;= 0:
+            raise ValueError("Deposit must be positive")
+        self.balance += amount
+
+account = BankAccount("Amina", 100)
+account.deposit(25)
+print(account.owner, account.balance)</code></pre>
+        <p><code>__init__</code> initializes a new instance. <code>self</code> refers to that instance. Instance methods can read or update its attributes. Classes are especially helpful when several pieces of related state and behavior belong together.</p>
+        <div class="exercise"><strong>Try it:</strong> create a <code>Book</code> class with title and author attributes and a method that returns a short description.</div>
+      </article>
+
+      <article id="idioms">
+        <h2>11. Pythonic tools: comprehensions, iterators, and generators</h2>
+        <p>A list comprehension creates a list from an iterable in a compact, readable way:</p>
+        <pre><code>squares = [number * number for number in range(1, 6)]
+even_squares = [n * n for n in range(10) if n % 2 == 0]
+print(squares)
+print(even_squares)</code></pre>
+        <p>Do not compress complicated logic into a one-liner. A regular loop is often clearer. An iterable is something you can loop over. A generator produces values one at a time, which can save memory for large sequences:</p>
+        <pre><code>def count_up_to(limit):
+    number = 1
+    while number &lt;= limit:
+        yield number
+        number += 1
+
+for value in count_up_to(3):
+    print(value)</code></pre>
+        <p><code>yield</code> pauses a generator and resumes it on the next iteration. This is useful for streams or values that need not all be stored at once.</p>
+      </article>
+
+      <article id="typing">
+        <h2>12. Type hints and data classes</h2>
+        <p>Type hints document the kinds of values a function expects and returns. Python does not enforce these hints at runtime by default, but editors and optional static-analysis tools can use them to catch mistakes.</p>
+        <pre><code>def average(numbers: list[float]) -&gt; float:
+    if not numbers:
+        raise ValueError("numbers must not be empty")
+    return sum(numbers) / len(numbers)</code></pre>
+        <p>A data class is a convenient way to define a class mainly used to hold data:</p>
+        <pre><code>from dataclasses import dataclass
+
+@dataclass
+class Student:
+    name: str
+    score: int
+
+student = Student("Amina", 88)
+print(student)</code></pre>
+        <p>Use hints to communicate intent, not as a substitute for tests or good design.</p>
+      </article>
+
+      <article id="testing">
+        <h2>13. Testing, debugging, and clean code</h2>
+        <p>Tests check that code behaves as expected. Python includes <code>unittest</code>; here is a small example:</p>
+        <pre><code>import unittest
+from my_math import is_even
+
+class TestIsEven(unittest.TestCase):
+    def test_even_number(self):
+        self.assertTrue(is_even(4))
+
+    def test_odd_number(self):
+        self.assertFalse(is_even(5))
+
+if __name__ == "__main__":
+    unittest.main()</code></pre>
+        <p>Save this as a test file and run it with <code>python -m unittest</code>. Test normal cases, boundary cases (like zero or an empty list), and invalid inputs. A failing test is useful information: reproduce it, inspect the traceback, make a small fix, and run the test again.</p>
+        <ul>
+          <li>Choose descriptive names and keep functions small.</li>
+          <li>Use consistent formatting; Python’s common style conventions are described in PEP 8.</li>
+          <li>Remove duplicated logic when a well-named function would clarify it.</li>
+          <li>Use version control such as Git to track changes as projects grow.</li>
+        </ul>
+      </article>
+
+      <article id="algorithms">
+        <h2>14. Algorithms and performance</h2>
+        <p>An algorithm is a set of steps for solving a problem. Big-O notation describes how the amount of work grows as input grows; it is not an exact time measurement.</p>
+        <div class="grid">
+          <div><strong>O(1)</strong><br>Constant-time lookup, such as a typical dictionary key lookup.</div>
+          <div><strong>O(n)</strong><br>One pass through <code>n</code> items.</div>
+          <div><strong>O(n²)</strong><br>Comparing every item with every other item using nested loops.</div>
+        </div>
+        <p>For example, searching a list one item at a time is O(n). Checking membership in a set is typically much faster for large collections. Choose a clear solution first, then measure real performance before optimizing.</p>
+        <pre><code>def find_name(names, target):
+    for name in names:
+        if name == target:
+            return True
+    return False</code></pre>
+        <p>Learn common data structures (lists, dictionaries, sets, queues, trees) and practice problem solving. Correctness and readability come before clever optimization.</p>
+      </article>
+
+      <article id="concurrency">
+        <h2>15. Concurrency basics</h2>
+        <p>Concurrency lets a program make progress on multiple tasks. For many network or other waiting-heavy tasks, <code>asyncio</code> can coordinate work without blocking on each wait. It is an advanced topic; learn normal functions and error handling first.</p>
+        <pre><code>import asyncio
+
+async def greet_after_wait():
+    print("Starting")
+    await asyncio.sleep(1)
+    print("Finished waiting")
+
+asyncio.run(greet_after_wait())</code></pre>
+        <p><code>async def</code> defines a coroutine, and <code>await</code> pauses it while an asynchronous operation completes. Async code is useful when libraries support it and a program spends time waiting. It does not automatically make CPU-heavy work faster. Threads and processes are other tools, each with trade-offs.</p>
+      </article>
+
+      <article id="projects">
+        <h2>16. Projects and your next steps</h2>
+        <p>Projects turn concepts into skills. Build in stages: make a simple version work, test it, then add features.</p>
+        <div class="grid">
+          <div><strong>Beginner</strong><br>Number guessing game, quiz, unit converter, or grade calculator.</div>
+          <div><strong>Intermediate</strong><br>To-do list that saves data, contact book, or command-line expense tracker.</div>
+          <div><strong>Advanced</strong><br>Well-tested package, web API, data analysis project, or an async network client.</div>
+        </div>
+        <h3>A project workflow</h3>
+        <ol>
+          <li>Describe the problem and list the smallest useful features.</li>
+          <li>Break the work into functions or modules.</li>
+          <li>Build one feature at a time and run the program often.</li>
+          <li>Handle expected bad input and errors.</li>
+          <li>Write tests, explain how to run it, and track changes with Git.</li>
+        </ol>
+        <h3>Suggested study path</h3>
+        <p>First become comfortable with chapters 1–8 and build two small programs. Then learn modules, classes, testing, and Git. After that, choose a direction—web development, automation, data science, AI, or systems—and learn the tools that fit it. Advanced programming comes from practice reading, building, testing, and improving real projects.</p>
+        <div class="callout"><strong>Remember:</strong> errors are a normal part of programming. Read them carefully, try one change at a time, and keep going. You do not need to memorize everything; knowing how to break a problem down and find reliable documentation is a core programming skill.</div>
+      </article>
+      <section class="endmatter">
+        <h2>Keep learning</h2>
+        <p>For official language documentation and reference material, visit <a href="https://docs.python.org/3/tutorial/">The Python Tutorial</a>. Return to the <a href="index.html">Benes Papers home page</a> for more learning resources.</p>
+      </section>
+    </main>
+  </div>
+  <footer><p>© 2026 Benes Papers · <a href="index.html">Home</a></p></footer>
+</body>
+</html>
