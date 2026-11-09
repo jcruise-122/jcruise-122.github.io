@@ -52,6 +52,11 @@
     .close-payment-modal {
       position: absolute; top: 12px; right: 12px; background: transparent; color: #666; font-size: 28px; line-height: 1;
     }
+    #answer-unlocked {
+      max-width: 1000px; margin: 20px auto 0; background: #eaf9ee; border: 1px solid #bfe3c8; border-radius: 12px; padding: 24px; text-align: center;
+    }
+    #answer-unlocked h3 { color: #116b35; margin-top: 0; }
+    .answer-download { display: inline-block; margin-top: 12px; }
     #quiz-section { max-width: 1000px; margin: 30px auto; padding: 20px; }
     #quiz-section button { margin: 6px; padding: 10px 14px; cursor: pointer; }
     #quiz-section input { padding: 10px; max-width: 100%; }
@@ -115,6 +120,12 @@
       </div>
     </section>
 
+    <section id="answer-unlocked" hidden>
+      <h3>✓ Explained answer unlocked</h3>
+      <p>Your payment has been verified, and the answer file is now available for download.</p>
+      <a class="button answer-download" href="answer-sample.txt" download="explained-answer-sample.txt">Download explained answer</a>
+    </section>
+
     <div id="payment-modal" class="payment-modal" hidden>
       <div class="payment-modal-content" role="dialog" aria-modal="true" aria-labelledby="payment-title">
         <button type="button" class="close-payment-modal" aria-label="Close">×</button>
@@ -124,9 +135,9 @@
           <li>Your personal MTN number is hidden from the customer.</li>
           <li>The merchant account can accept cards and local mobile money.</li>
           <li>Access is granted only after the payment is verified.</li>
-          <li>Use a real gateway such as DPO, Pesapal, or Ontech to complete the live transaction.</li>
+          <li>Replace the demo checkout link with your live provider checkout URL before going live.</li>
         </ul>
-        <button type="button" class="checkout-button">Continue to secure checkout</button>
+        <button type="button" class="checkout-button" onclick="window.open('https://example.com/checkout/benes-papers', '_blank', 'noopener,noreferrer'); completeAnswerPayment();">Continue to secure checkout</button>
       </div>
     </div>
 
