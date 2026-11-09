@@ -28,6 +28,30 @@
     .button:hover { background: #082c6c; }
     .payment { margin-top: 32px; padding: 30px 18px; background: #0b3d91; color: white; text-align: center; }
     .payment h2 { margin-top: 0; }
+    .answer-actions { margin-top: 18px; }
+    .unlock-answer-btn, .checkout-button, .close-payment-modal {
+      border: none; border-radius: 8px; cursor: pointer; font-weight: bold;
+    }
+    .unlock-answer-btn {
+      background: #ffd966; color: #1f1f1f; padding: 12px 20px; font-size: 16px;
+    }
+    .unlock-answer-btn:hover { background: #f4cb3d; }
+    .payment-modal {
+      position: fixed; inset: 0; background: rgba(0, 0, 0, 0.62); display: flex; align-items: center; justify-content: center; z-index: 1000;
+    }
+    .payment-modal[hidden] { display: none; }
+    .payment-modal-content {
+      position: relative; width: min(560px, 92vw); background: white; color: #222; padding: 24px 22px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    }
+    .payment-modal-content h3 { margin-top: 0; color: #0b3d91; }
+    .payment-modal-content ul { text-align: left; margin: 16px 0; line-height: 1.7; }
+    .checkout-button {
+      background: #0b3d91; color: white; padding: 12px 18px; font-size: 15px;
+    }
+    .checkout-button:hover { background: #082c6c; }
+    .close-payment-modal {
+      position: absolute; top: 12px; right: 12px; background: transparent; color: #666; font-size: 28px; line-height: 1;
+    }
     #quiz-section { max-width: 1000px; margin: 30px auto; padding: 20px; }
     #quiz-section button { margin: 6px; padding: 10px 14px; cursor: pointer; }
     #quiz-section input { padding: 10px; max-width: 100%; }
@@ -86,7 +110,26 @@
       <h2>Need Explained Answers?</h2>
       <p>Get detailed explanations and solutions to selected past papers.</p>
       <strong>Access explained answers for only K1.00</strong>
+      <div class="answer-actions">
+        <button type="button" class="unlock-answer-btn paid-answer">Pay K1.00 to unlock</button>
+      </div>
     </section>
+
+    <div id="payment-modal" class="payment-modal" hidden>
+      <div class="payment-modal-content" role="dialog" aria-modal="true" aria-labelledby="payment-title">
+        <button type="button" class="close-payment-modal" aria-label="Close">×</button>
+        <h3 id="payment-title">Secure payment checkout</h3>
+        <p>Customers pay through a secure payment provider before they can access the explained answers.</p>
+        <ul>
+          <li>Your personal MTN number is hidden from the customer.</li>
+          <li>The merchant account can accept cards and local mobile money.</li>
+          <li>Access is granted only after the payment is verified.</li>
+          <li>Use a real gateway such as DPO, Pesapal, or Ontech to complete the live transaction.</li>
+        </ul>
+        <button type="button" class="checkout-button">Continue to secure checkout</button>
+      </div>
+    </div>
+
     <section id="quiz-section">
       <h2>🧠 Quiz Challenge</h2>
       <p>Test yourself or challenge your friends!</p>
