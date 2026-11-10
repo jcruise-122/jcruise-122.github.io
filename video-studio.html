@@ -3,96 +3,87 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Create and download short prompt-inspired motion graphic videos for free in your browser.">
+  <meta name="description" content="Generate short AI videos with generated audio from a text prompt.">
   <title>AI Video Studio | Benes Papers</title>
   <style>
-    :root { color-scheme:light; --navy:#081b3b; --blue:#1f5ad8; --cyan:#4ac7ff; --bg:#eef3fb; --ink:#1d2b3a; --muted:#5d6d81; --line:#dfe7f4; }
+    :root { color-scheme:light; --navy:#081b3b; --blue:#1f5ad8; --pale:#eef3fb; --ink:#1d2b3a; --muted:#5d6d81; --line:#dfe7f4; }
     * { box-sizing:border-box; }
-    body { margin:0; font:16px/1.6 Arial,Helvetica,sans-serif; color:var(--ink); background:linear-gradient(180deg,#f4f8ff,var(--bg)); }
-    header,footer { padding:20px; color:white; text-align:center; background:linear-gradient(135deg,#081b3b,#16438d); }
+    body { margin:0; font:16px/1.6 Arial,Helvetica,sans-serif; color:var(--ink); background:linear-gradient(180deg,#f4f8ff,var(--pale)); }
+    header,footer { padding:22px; color:white; text-align:center; background:linear-gradient(135deg,#081b3b,#16438d); }
     header a,footer a { color:#dcecff; }
     header h1 { margin:10px 0 4px; }
     main { max-width:1100px; margin:30px auto; padding:0 18px; }
     .intro,.studio,.help { padding:clamp(18px,3vw,30px); border:1px solid var(--line); border-radius:18px; background:white; box-shadow:0 12px 32px #0b2b5b12; margin-bottom:20px; }
     .intro { background:linear-gradient(120deg,#fff,#edf4ff); }
-    .intro h2,.studio h2,.help h2 { color:var(--navy); margin-top:0; }
+    h2 { color:var(--navy); margin-top:0; }
     .tag { display:inline-block; padding:4px 11px; border-radius:99px; color:#1247a0; background:#e5efff; font-size:.8rem; font-weight:700; }
-    .studio-grid { display:grid; grid-template-columns:minmax(0,1fr) minmax(280px,.85fr); gap:22px; align-items:start; }
+    .grid { display:grid; grid-template-columns:minmax(0,1fr) minmax(280px,.9fr); gap:22px; align-items:start; }
     label { display:block; margin:14px 0 6px; font-weight:700; color:var(--navy); }
-    textarea,select { width:100%; padding:12px 14px; border:1px solid #bdcbe0; border-radius:10px; font:inherit; background:#fff; }
-    textarea { min-height:140px; resize:vertical; }
-    textarea:focus,select:focus,button:focus-visible,a:focus-visible { outline:3px solid #f0a000; outline-offset:2px; }
-    .hint { margin:6px 0 0; color:var(--muted); font-size:.9rem; }
+    textarea,select,input { width:100%; padding:12px 14px; border:1px solid #bdcbe0; border-radius:10px; font:inherit; background:#fff; }
+    textarea { min-height:150px; resize:vertical; }
+    textarea:focus,select:focus,input:focus,button:focus-visible,a:focus-visible { outline:3px solid #f0a000; outline-offset:2px; }
     .controls { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
     button,.download { display:inline-block; min-height:46px; border:0; border-radius:10px; padding:11px 17px; font:inherit; font-weight:700; text-decoration:none; cursor:pointer; }
     .primary { margin-top:16px; color:white; background:linear-gradient(135deg,var(--blue),#438cf1); }
     button:disabled { opacity:.55; cursor:not-allowed; }
-    .download { margin:12px 0 0 8px; background:#e7f2eb; color:#155d32; }
-    .preview-wrap { padding:12px; border-radius:15px; background:#eaf0fa; }
-    canvas { display:block; width:min(100%,360px); height:auto; margin:0 auto; border-radius:10px; background:#101a35; }
-    .status { min-height:1.6em; color:var(--muted); margin:12px 0 0; }
-    .disclaimer { padding:13px 15px; border-left:4px solid #e4a300; border-radius:8px; background:#fff8df; }
+    .download { margin:10px 0 0 8px; background:#e7f2eb; color:#155d32; }
+    .preview { overflow:hidden; border-radius:14px; background:#101a35; }
+    video { display:block; width:100%; min-height:240px; max-height:620px; background:#101a35; }
+    .hint,.status { color:var(--muted); font-size:.92rem; }
+    .status { min-height:1.6em; margin:12px 0 0; }
+    .notice { padding:13px 15px; border-left:4px solid #e4a300; border-radius:8px; background:#fff8df; }
     .help ul { padding-left:22px; }
-    @media(max-width:760px) { .studio-grid { grid-template-columns:1fr; } }
+    [hidden] { display:none !important; }
+    @media(max-width:760px) { .grid { grid-template-columns:1fr; } }
     @media(max-width:460px) { .controls { grid-template-columns:1fr; } }
   </style>
+  <script src="video-config.js"></script>
 </head>
 <body>
   <header>
     <a href="index.html">← Benes Papers home</a>
     <h1>AI Video Studio</h1>
-    <p>Turn an idea into a short animated video</p>
+    <p>Generate original video scenes with AI-created audio</p>
   </header>
   <main>
     <section class="intro">
-      <span class="tag">Free · Runs in your browser</span>
-      <h2>Make a short video from a prompt</h2>
-      <p>Describe a topic, add a title, choose a length, and create a downloadable vertical motion-graphics video. Your prompt is processed locally in this page.</p>
-      <p class="disclaimer"><strong>What this version does:</strong> it creates animated text and graphic scenes inspired by your prompt. It does not generate realistic footage, images, voices, or music, and it does not send your prompt to an AI service.</p>
+      <span class="tag">Text-to-video · Generated audio</span>
+      <h2>Turn your idea into a video</h2>
+      <p>Write a scene description and the connected video model will generate video with audio. Generation requires a separately deployed backend and an enabled provider account; model usage may incur charges.</p>
+      <p class="notice"><strong>Privacy and safety:</strong> prompts are sent to the configured AI provider. Do not enter private information, upload content you do not have rights to use, or create deceptive or non-consensual media. The website itself never contains the provider secret key.</p>
     </section>
-
     <section class="studio" aria-labelledby="studio-title">
-      <h2 id="studio-title">Create your video</h2>
-      <div class="studio-grid">
+      <h2 id="studio-title">Create a video</h2>
+      <div class="grid">
         <div>
-          <label for="video-title">Video title</label>
-          <input id="video-title" type="text" maxlength="60" value="A Bright New Idea" style="width:100%;padding:12px 14px;border:1px solid #bdcbe0;border-radius:10px;font:inherit">
-          <label for="video-prompt">What should the video be about?</label>
-          <textarea id="video-prompt" maxlength="280" placeholder="Example: A quick, inspiring introduction to learning web development and building your first website."></textarea>
-          <p class="hint">Keep it concise (up to 280 characters). Don’t include private information.</p>
+          <label for="video-prompt">Describe the video you want</label>
+          <textarea id="video-prompt" maxlength="1200" placeholder="Example: A tiny robot tending a rooftop garden at sunrise, cinematic camera movement, warm hopeful mood, gentle birdsong and soft ambient music."></textarea>
+          <p class="hint">Be specific about the scene, style, camera movement, and sounds. Maximum 1,200 characters.</p>
           <div class="controls">
-            <div>
-              <label for="video-duration">Video length</label>
-              <select id="video-duration"><option value="6">6 seconds</option><option value="10" selected>10 seconds</option><option value="15">15 seconds</option></select>
-            </div>
-            <div>
-              <label for="video-format">Format</label>
-              <select id="video-format" disabled><option>Vertical · 9:16</option></select>
-            </div>
+            <div><label for="video-aspect">Video format</label><select id="video-aspect"><option value="9:16">Vertical · 9:16</option><option value="16:9">Landscape · 16:9</option></select></div>
+            <div><label for="audio-mode">Audio</label><select id="audio-mode" disabled><option>AI-generated audio · On</option></select></div>
           </div>
-          <button class="primary" id="create-video" type="button">Create video</button>
-          <a class="download" id="download-video" hidden download="benes-video.webm">Download video</a>
-          <p class="status" id="status" role="status" aria-live="polite">Add a prompt to get started.</p>
+          <button class="primary" id="create-video" type="button">Generate AI video</button>
+          <a class="download" id="download-video" hidden download="ai-video.mp4">Download video</a>
+          <p class="status" id="status" role="status" aria-live="polite">Enter a prompt to begin.</p>
         </div>
-        <div class="preview-wrap">
-          <canvas id="video-canvas" width="720" height="1280" aria-label="Animated video preview"></canvas>
-          <p class="hint">Preview · 720 × 1280 · WebM download</p>
+        <div>
+          <div class="preview"><video id="generated-video" controls playsinline preload="metadata" aria-label="Generated video preview"></video></div>
+          <p class="hint" id="video-note">Your generated video and audio preview will appear here.</p>
         </div>
       </div>
     </section>
-
     <section class="help">
-      <h2>How to use it</h2>
+      <h2>About this generator</h2>
       <ul>
-        <li>Write one clear idea or a short scene description.</li>
-        <li>Select a duration and press <strong>Create video</strong>.</li>
-        <li>When rendering finishes, choose <strong>Download video</strong>.</li>
-        <li>Video recording depends on your browser supporting canvas recording and WebM.</li>
+        <li>This calls a real hosted text-to-video model with audio generation enabled; the page does not fake or simulate the result.</li>
+        <li>AI video generation is not free to operate at scale. The model provider may charge the account owner for each request.</li>
+        <li>GitHub Pages hosts static websites only. A separate server is needed to protect the provider key and relay generation requests.</li>
+        <li>To activate it, deploy the included backend on a server with environment secrets, then set the backend URL in <code>video-config.js</code>.</li>
       </ul>
-      <p>For genuine text-to-video generation (AI-created footage), this page would need a video-generation provider and a secure server-side integration. Never put a provider secret/API key in a public website’s JavaScript.</p>
     </section>
   </main>
-  <footer><p>© 2026 Benes Papers · <a href="index.html">Home</a> · <a href="programming-books.html">Free learning library</a></p></footer>
+  <footer><p>© 2026 Benes Papers · <a href="index.html">Home</a> · <a href="programming-books.html">Learning library</a></p></footer>
   <script src="video-studio.js"></script>
 </body>
 </html>
