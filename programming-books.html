@@ -1,34 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Free beginner-to-advanced programming books for C++, C, JavaScript, TypeScript, C#, PHP, HTML, and CSS.">
-  <title>Programming Books: Beginner to Advanced | Benes Papers</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free beginner-to-advanced programming and technology books, including cybersecurity, networking, Linux, cloud, databases, and data science.">
+  <title>Programming &amp; Tech Learning Library | Benes Papers</title>
   <style>
     :root { --navy:#082c6c; --blue:#0b3d91; --pale:#f4f7fc; --ink:#202b3c; --muted:#526174; --border:#dce5f2; }
-    * { box-sizing:border-box; } body { margin:0; font:16px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif; color:var(--ink); background:var(--pale); }
-    header,footer { padding:26px 18px; color:white; text-align:center; background:var(--navy); } header a,footer a { color:#dbeafe; }
-    main { max-width:1100px; margin:32px auto; padding:0 18px; } .intro,.book-card { padding:24px; border:1px solid var(--border); border-radius:12px; background:white; box-shadow:0 3px 12px #0000000a; }
-    .intro { margin-bottom:20px; } h1,h2,h3 { line-height:1.3; } h2,h3 { color:var(--navy); } .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px; }
-    .book-card { display:flex; flex-direction:column; } .book-card p { color:var(--muted); flex:1; } .tag { display:inline-block; padding:2px 9px; border-radius:99px; color:var(--blue); background:#eaf1ff; font-size:.85rem; font-weight:700; }
-    .button { display:inline-block; align-self:flex-start; padding:10px 16px; border-radius:7px; color:white; background:var(--blue); font-weight:700; text-decoration:none; } .button:hover { background:var(--navy); }
-    .note { margin-top:20px; padding:14px 18px; border-left:4px solid var(--blue); background:#eef4ff; }
+    * { box-sizing:border-box; }
+    body { margin:0; font:16px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif; color:var(--ink); background:var(--pale); }
+    header,footer { padding:28px 18px; color:white; text-align:center; background:linear-gradient(130deg,#061b43,#0b3d91 65%,#2667c9); }
+    header a,footer a { color:#dbeafe; }
+    header h1 { margin:10px 0 4px; font-size:clamp(2rem,5vw,3rem); }
+    header p { margin:0; color:#e5edfb; }
+    main { max-width:1160px; margin:34px auto; padding:0 20px; }
+    .intro,.filters,.book-card { border:1px solid var(--border); border-radius:16px; background:white; box-shadow:0 8px 26px #0b2b5b0d; }
+    .intro { padding:clamp(22px,4vw,36px); margin-bottom:22px; background:linear-gradient(115deg,#fff,#edf4ff); }
+    .intro h2 { margin:10px 0; color:var(--navy); font-size:clamp(1.5rem,3vw,2rem); }
+    .tag { display:inline-block; padding:3px 11px; border-radius:999px; color:var(--blue); background:#e5efff; font-size:.85rem; font-weight:750; }
+    .filters { display:grid; grid-template-columns:minmax(220px,1fr) minmax(180px,260px); gap:14px; padding:16px; margin-bottom:20px; }
+    .filters label { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+    .filters input,.filters select { width:100%; min-height:46px; padding:10px 13px; border:1px solid #bdcbe0; border-radius:9px; color:var(--ink); background:white; font:inherit; }
+    .filters input:focus,.filters select:focus,.button:focus-visible { outline:3px solid #f0a000; outline-offset:2px; }
+    .results-line { display:flex; justify-content:space-between; gap:12px; align-items:center; margin:10px 2px 16px; color:var(--muted); }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,245px),1fr)); gap:18px; }
+    .book-card { overflow:hidden; display:flex; flex-direction:column; transition:transform .2s ease,box-shadow .2s ease; }
+    .book-card:hover { transform:translateY(-4px); box-shadow:0 14px 32px #0b2b5b1a; }
+    .book-cover { min-height:142px; padding:19px; display:flex; align-items:flex-end; justify-content:space-between; color:white; background:linear-gradient(135deg,#102b5d,#3578db); }
+    .book-cover .cover-icon { font-size:2.5rem; filter:drop-shadow(0 3px 5px #0005); }
+    .book-cover .cover-label { max-width:70%; font-size:.78rem; font-weight:800; letter-spacing:.12em; text-transform:uppercase; opacity:.9; }
+    .cover-systems { background:linear-gradient(135deg,#102b5d,#3361a8); }
+    .cover-web { background:linear-gradient(135deg,#46216e,#a144b5); }
+    .cover-security { background:linear-gradient(135deg,#113e4a,#168b86); }
+    .cover-network { background:linear-gradient(135deg,#164b78,#26a2bd); }
+    .cover-linux { background:linear-gradient(135deg,#633611,#e18a28); }
+    .cover-data { background:linear-gradient(135deg,#24336e,#6576e8); }
+    .cover-cloud { background:linear-gradient(135deg,#164c75,#48a9dc); }
+    .card-body { display:flex; flex:1; flex-direction:column; padding:20px; }
+    .card-body h2 { margin:10px 0 5px; color:var(--navy); font-size:1.28rem; line-height:1.3; }
+    .card-body p { flex:1; margin:8px 0 18px; color:var(--muted); }
+    .button { display:inline-flex; align-items:center; justify-content:center; align-self:flex-start; min-height:44px; padding:10px 16px; border-radius:8px; color:white; background:var(--blue); font-weight:750; text-decoration:none; }
+    .button:hover { background:var(--navy); }
+    .note,.empty { margin-top:22px; padding:16px 19px; border-left:4px solid var(--blue); border-radius:8px; background:#eaf1ff; }
+    .empty[hidden] { display:none; }
+    @media(max-width:620px) { .filters { grid-template-columns:1fr; } .results-line { align-items:flex-start; flex-direction:column; } }
+    @media(prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto!important; transition:none!important; } }
   </style>
 </head>
 <body>
-<header><a href="index.html">← Benes Papers home</a><h1>Programming Books</h1><p>Free, practical learning paths from first steps to advanced projects</p></header>
+<header><a href="index.html">← Benes Papers home</a><h1>Programming &amp; Tech Library</h1><p>Friendly, practical learning paths from first steps to advanced projects</p></header>
 <main>
-  <section class="intro"><span class="tag">8 complete learning paths</span><h2>Choose what you want to build</h2><p>Each book includes guided lessons, runnable examples, practice tasks, and project suggestions. Start at the beginning if this is your first time programming; otherwise, use the contents to jump to a topic.</p><p><strong>Already learning Python?</strong> Visit the <a href="python-book.html">Python book</a>.</p></section>
-  <section class="grid" aria-label="Programming books">
-    <article class="book-card"><span class="tag">Systems · Beginner to advanced</span><h2>C++</h2><p>Learn modern C++ fundamentals, functions, classes, the standard library, resource safety, templates, and performance-aware design.</p><a class="button" href="book.html?book=cpp">Open the C++ book</a></article>
-    <article class="book-card"><span class="tag">Systems · Beginner to advanced</span><h2>C</h2><p>Build a strong foundation in C, from variables and control flow to pointers, memory, files, modular code, and debugging.</p><a class="button" href="book.html?book=c">Open the C book</a></article>
-    <article class="book-card"><span class="tag">Web · Beginner to advanced</span><h2>JavaScript</h2><p>Go from browser basics to functions, objects, DOM interaction, asynchronous code, modules, testing, and accessible interfaces.</p><a class="button" href="book.html?book=javascript">Open the JavaScript book</a></article>
-    <article class="book-card"><span class="tag">Web · Beginner to advanced</span><h2>TypeScript</h2><p>Learn JavaScript foundations and add types, unions, generics, safe API handling, project structure, and reliable application patterns.</p><a class="button" href="book.html?book=typescript">Open the TypeScript book</a></article>
-    <article class="book-card"><span class="tag">Application development · Beginner to advanced</span><h2>C#</h2><p>Explore .NET and C# fundamentals, classes, collections, LINQ, exceptions, async programming, and maintainable application design.</p><a class="button" href="book.html?book=csharp">Open the C# book</a></article>
-    <article class="book-card"><span class="tag">Web · Beginner to advanced</span><h2>PHP</h2><p>Create dynamic web applications while learning PHP syntax, functions, arrays, forms, safe database access, and application structure.</p><a class="button" href="book.html?book=php">Open the PHP book</a></article>
-    <article class="book-card"><span class="tag">Web foundations · Beginner to advanced</span><h2>HTML</h2><p>Structure web pages with semantic elements, accessible forms, tables, metadata, responsive-friendly markup, and clean document design.</p><a class="button" href="book.html?book=html">Open the HTML book</a></article>
-    <article class="book-card"><span class="tag">Web foundations · Beginner to advanced</span><h2>CSS</h2><p>Style responsive websites with selectors, the box model, layouts, typography, design systems, transitions, and maintainable CSS.</p><a class="button" href="book.html?book=css">Open the CSS book</a></article>
+  <section class="intro"><span class="tag">14 free learning paths</span><h2>Choose what you want to learn</h2><p>Explore programming languages and essential technology topics. Each book includes a guided path, examples, practice activities, and project ideas. Search by topic or filter by category to find a good next step.</p><p><strong>Suggested web path:</strong> HTML → CSS → JavaScript → TypeScript. Learn cybersecurity with a defensive, responsible mindset and practice only on systems you own or are explicitly authorized to use.</p><p><a href="python-book.html">Continue with the Python book</a></p></section>
+  <section class="filters" aria-label="Filter learning books">
+    <div><label for="book-search">Search books</label><input id="book-search" type="search" placeholder="Search languages and courses…" autocomplete="off"></div>
+    <div><label for="category-filter">Filter by category</label><select id="category-filter"><option value="all">All categories</option><option value="programming">Programming</option><option value="web">Web development</option><option value="systems">Systems</option><option value="security">Cybersecurity</option><option value="networking">Networking</option><option value="linux">Linux</option><option value="data">Data &amp; databases</option><option value="cloud">Cloud</option></select></div>
   </section>
-  <p class="note"><strong>Suggested order for web development:</strong> HTML → CSS → JavaScript. Learn TypeScript after you are comfortable with JavaScript. C and C++ are excellent for understanding how programs work close to the hardware.</p>
-</main><footer><p>© 2026 Benes Papers · <a href="index.html">Home</a> · <a href="python-book.html">Python book</a></p></footer>
-</body></html>
+  <div class="results-line"><strong>Browse the library</strong><span id="result-count" aria-live="polite"></span></div>
+  <section class="grid" id="book-grid" aria-label="Learning books">
+    <article class="book-card" data-category="programming systems" data-search="c++ cpp programming systems modern compiler"><div class="book-cover cover-systems" aria-hidden="true"><span class="cover-label">Systems programming</span><span class="cover-icon">&lt;/&gt;</span></div><div class="card-body"><span class="tag">Beginner → Advanced</span><h2>C++</h2><p>Modern C++ fundamentals, classes, standard-library tools, resource safety, templates, testing, and performance concepts.</p><a class="button" href="book.html?book=cpp">Open C++ book</a></div></article>
+    <article class="book-card" data-category="programming systems" data-search="c programming systems pointers memory"><div class="book-cover cover-systems" aria-hidden="true"><span class="cover-label">Systems programming</span><span class="cover-icon">C</span></div><div class="card-body"><span class="tag">Beginner → Advanced</span><h2>C</h2><p>Build a strong foundation in C, including functions, arrays, pointers, memory, files, debugging, and safe practices.</p><a class="button" href="book.html?book=c">Open C book</a></div></article>
+    <article class="book-card" data-category="programming web" data-search="javascript js programming web browser"><div class="book-cover cover-web" aria-hidden="true"><span class="cover-label">Interactive web</span><span class="cover-icon">JS</span></div><div class="card-body"><span class="tag">Beginner → Advanced</span><h2>JavaScript</h2><p>Learn functions, objects, browser interaction, accessible interfaces, asynchronous code, modules, and testing.</p><a class="button" href="book.html?book=javascript">Open JavaScript book</a></div></article>
+    <article class="book-card" data-category="programming web" data-search="typescript ts programming web types"><div class="book-cover cover-web" aria-hidden="true"><span class="cover-label">Typed web apps</span><span class="cover-icon">TS</span></div><div class="card-body"><span class="tag">Beginner → Advanced</span><h2>TypeScript</h2><p>Build on JavaScript with types, unions, generics, safe API data handling, project structure, and reliable patterns.</p><a class="button" href="book.html?book=typescript">Open TypeScript book</a></div></article>
+    <article class="book-card" data-category="programming" data-search="c sharp c# dotnet application programming"><div class="book-cover cover-systems" aria-hidden="true"><span class="cover-label">Application development</span><span class="cover-icon">C#</span></div><div class="card-body"><span class="tag">Beginner → Advanced</span><h2>C#</h2><p>Explore .NET fundamentals, collections, classes, LINQ, exceptions, async programming, and application design.</p><a class="button" href="book.html?book=csharp">Open C# book</a></div></article>
+    <article class="book-card" data-category="programming web" data-search="php web backend programming"><div class="book-cover cover-web" aria-hidden="true"><span class="cover-label">Web development</span><span class="cover-icon">PHP</span></div><div class="card-body"><span class="tag">Beginner → Advanced</span><h2>PHP</h2><p>Create dynamic web applications with forms, arrays, secure output, prepared database queries, and testing.</p><a class="button" href="book.html?book=php">Open PHP book</a></div></article>
+    <article class="book-card" data-category="web" data-search="html web accessibility markup"><div class="book-cover cover-web" aria-hidden="true"><span class="cover-label">Web foundations</span><span class="cover-icon">HTML</span></div><div class="card-body"><span class="tag">Beginner → Advanced</span><h2>HTML</h2><p>Structure web pages with semantic elements, accessible forms, tables, metadata, and meaningful content.</p><a class="button" href="book.html?book=html">Open HTML book</a></div></article>
+    <article class="book-card" data-category="web" data-search="css web responsive design styles"><div class="book-cover cover-web" aria-hidden="true"><span class="cover-label">Web foundations</span><span class="cover-icon">CSS</span></div><div class="card-body"><span class="tag">Beginner → Advanced</span><h2>CSS</h2><p>Style responsive interfaces with selectors, the box model, layouts, typography, design tokens, and accessibility.</p><a class="button" href="book.html?book=css">Open CSS book</a></div></article>
+    <article class="book-card" data-category="security" data-search="cybersecurity cyber security defensive privacy risk secure incident"><div class="book-cover cover-security" aria-hidden="true"><span class="cover-label">Defensive security</span><span class="cover-icon">盾</span></div><div class="card-body"><span class="tag">Beginner → Advanced · Defensive</span><h2>Cybersecurity</h2><p>Learn security principles, personal protection, risk assessment, secure development, monitoring, backups, and incident response. Practice only with clear authorization.</p><a class="button" href="book.html?book=cybersecurity">Open cybersecurity book</a></div></article>
+    <article class="book-card" data-category="networking systems" data-search="computer networking internet tcp ip dns network"><div class="book-cover cover-network" aria-hidden="true"><span class="cover-label">Connected systems</span><span class="cover-icon">◎</span></div><div class="card-body"><span class="tag">Beginner → Advanced</span><h2>Computer Networking</h2><p>Understand network models, addressing, DNS, HTTP, routing concepts, Wi-Fi safety, and troubleshooting fundamentals.</p><a class="button" href="book.html?book=networking">Open networking book</a></div></article>
+    <article class="book-card" data-category="linux systems" data-search="linux command line operating system shell"><div class="book-cover cover-linux" aria-hidden="true"><span class="cover-label">Operating systems</span><span class="cover-icon">⌘</span></div><div class="card-body"><span class="tag">Beginner → Advanced</span><h2>Linux &amp; Command Line</h2><p>Get comfortable with files, shell basics, permissions, processes, package management, scripting concepts, and system care.</p><a class="button" href="book.html?book=linux">Open Linux book</a></div></article>
+    <article class="book-card" data-category="data" data-search="database sql data relational database design"><div class="book-cover cover-data" aria-hidden="true"><span class="cover-label">Data foundations</span><span class="cover-icon">▤</span></div><div class="card-body"><span class="tag">Beginner → Advanced</span><h2>Databases &amp; SQL</h2><p>Learn relational data modeling, tables, queries, joins, constraints, transactions, indexes, and safe application access.</p><a class="button" href="book.html?book=databases">Open databases book</a></div></article>
+    <article class="book-card" data-category="cloud" data-search="cloud computing cloud services architecture"><div class="book-cover cover-cloud" aria-hidden="true"><span class="cover-label">Cloud computing</span><span class="cover-icon">☁</span></div><div class="card-body"><span class="tag">Beginner → Advanced</span><h2>Cloud Computing</h2><p>Explore cloud concepts, shared responsibility, identity, storage, deployment planning, cost awareness, and reliability.</p><a class="button" href="book.html?book=cloud">Open cloud book</a></div></article>
+    <article class="book-card" data-category="data" data-search="data science analysis statistics visualization"><div class="book-cover cover-data" aria-hidden="true"><span class="cover-label">Data &amp; insights</span><span class="cover-icon">▥</span></div><div class="card-body"><span class="tag">Beginner → Advanced</span><h2>Data Science Foundations</h2><p>Practice asking good questions, organizing data, basic statistics, visualization, interpretation, and communicating results.</p><a class="button" href="book.html?book=datascience">Open data science book</a></div></article>
+  </section>
+  <p class="empty" id="no-results" hidden>No books match those filters. Try another search or choose “All categories.”</p>
+  <p class="note"><strong>Learning responsibly:</strong> security lessons here focus on protection, privacy, secure configuration, and incident readiness. Use technology skills ethically and respect laws, policies, and other people’s systems.</p>
+</main>
+<footer><p>© 2026 Benes Papers · <a href="index.html">Home</a> · <a href="python-book.html">Python book</a></p></footer>
+<script>
+  const search = document.getElementById('book-search');
+  const category = document.getElementById('category-filter');
+  const cards = [...document.querySelectorAll('.book-card')];
+  const count = document.getElementById('result-count');
+  const empty = document.getElementById('no-results');
+  function filterBooks() {
+    const term = search.value.trim().toLowerCase();
+    const selected = category.value;
+    let visible = 0;
+    cards.forEach(card => {
+      const matchesText = `${card.dataset.search} ${card.textContent}`.toLowerCase().includes(term);
+      const matchesCategory = selected === 'all' || card.dataset.category.split(' ').includes(selected);
+      const show = matchesText && matchesCategory;
+      card.hidden = !show;
+      if (show) visible += 1;
+    });
+    count.textContent = `${visible} ${visible === 1 ? 'book' : 'books'} shown`;
+    empty.hidden = visible !== 0;
+  }
+  search.addEventListener('input', filterBooks);
+  category.addEventListener('change', filterBooks);
+  filterBooks();
+</script>
+</body>
+</html>
