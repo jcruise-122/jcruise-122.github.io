@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Read a free programming book with practical lessons, examples, exercises, and project ideas.">
+<title>Programming Book | Benes Papers</title>
+<style>
+:root { color-scheme:light; --navy:#082c6c; --blue:#0b3d91; --pale:#f4f7fc; --ink:#202b3c; --muted:#526174; --border:#dce5f2; }
+* { box-sizing:border-box; } html { scroll-behavior:smooth; scroll-padding-top:18px; }
+body { margin:0; font:16px/1.7 system-ui,-apple-system,"Segoe UI",sans-serif; color:var(--ink); background:var(--pale); }
+header { padding:26px 18px; color:white; text-align:center; background:var(--navy); } header a { color:#dbeafe; } header h1 { margin:8px 0; line-height:1.2; }
+.layout { display:grid; grid-template-columns:250px minmax(0,780px); gap:28px; max-width:1120px; margin:28px auto; padding:0 18px; align-items:start; }
+nav { position:sticky; top:16px; max-height:calc(100vh - 32px); overflow:auto; padding:18px; border:1px solid var(--border); border-radius:12px; background:white; }
+nav h2 { margin:0 0 8px; color:var(--navy); font-size:1.1rem; } nav ol { margin:0; padding-left:22px; } nav li { margin:4px 0; } a { color:var(--blue); }
+main { min-width:0; } .intro,article,.endmatter { margin-bottom:18px; padding:24px; border:1px solid var(--border); border-radius:12px; background:white; box-shadow:0 3px 12px #0000000a; }
+h2,h3 { color:var(--navy); line-height:1.3; } h2 { margin-top:0; } .tag { display:inline-block; padding:2px 9px; border-radius:99px; color:var(--blue); background:#eaf1ff; font-size:.85rem; font-weight:700; }
+pre { overflow-x:auto; padding:16px; border-radius:8px; color:#eef4ff; background:#14243b; font:.92rem/1.55 ui-monospace,SFMono-Regular,Consolas,monospace; }
+.callout,.exercise { margin:14px 0; padding:12px 16px; border-left:4px solid #2872ce; background:#f1f6ff; } .exercise { border:1px dashed #9aacc5; border-radius:8px; background:#fafcff; }
+footer { padding:24px; color:white; text-align:center; background:var(--navy); } footer a { color:#dbeafe; }
+@media(max-width:800px) { .layout { grid-template-columns:1fr; } nav { position:static; max-height:none; } nav ol { columns:2; } }
+@media(max-width:480px) { nav ol { columns:1; } .intro,article,.endmatter { padding:18px; } }
+</style>
+</head>
+<body>
+<header><a href="programming-books.html">← All programming books</a><h1 id="book-title">Programming Book</h1><p id="book-subtitle">Beginner to advanced, one practical lesson at a time.</p></header>
+<div class="layout"><nav aria-label="Book contents"><h2>Contents</h2><ol id="contents"></ol></nav><main id="book-content" aria-live="polite"></main></div>
+<footer><p>© 2026 Benes Papers · <a href="programming-books.html">All programming books</a> · <a href="index.html">Home</a></p></footer>
+<script src="books.js"></script>
+</body></html>
