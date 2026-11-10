@@ -5,69 +5,679 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Benes Papers - Global Past Papers and Programming Books</title>
   <style>
+    :root {
+      --navy: #081b3b;
+      --navy-2: #0d2d6a;
+      --blue: #1f5ad8;
+      --cyan: #4ac7ff;
+      --gold: #ffcc4d;
+      --bg: #eef3fb;
+      --card: #ffffff;
+      --text: #1d2b3a;
+      --muted: #5d6d81;
+      --line: #dfe7f4;
+      --shadow: 0 18px 40px rgba(9, 24, 57, 0.12);
+    }
+
     * { box-sizing: border-box; }
-    body { margin: 0; font-family: Arial, sans-serif; background: #f4f6f8; color: #222; line-height: 1.5; }
-    header, footer { background: #082c6c; color: white; text-align: center; padding: 22px 16px; }
-    header h1 { margin: 0; }
-    nav { background: #0b3d91; padding: 12px; text-align: center; }
-    nav a { color: white; margin: 0 12px; text-decoration: none; font-weight: bold; }
-    .hero { text-align: center; padding: 35px 18px; background: white; }
-    .hero h2, .section-title { color: #0b3d91; }
-    .container { max-width: 1000px; margin: 28px auto; padding: 0 18px; }
-    .selector-panel, .learning-resource { background: white; padding: 24px; border-radius: 12px; box-shadow: 0 3px 12px #00000012; }
-    .selector-chain { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 16px; }
-    label { display: block; font-weight: bold; margin-bottom: 6px; }
-    select { width: 100%; padding: 12px; border: 1px solid #bdc7d4; border-radius: 7px; background: white; font-size: 16px; }
-    select:disabled { background: #eef1f5; color: #687386; }
-    #selection-status { margin: 18px 0 0; color: #555; }
-    #paper-results { margin-top: 20px; }
-    .paper-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; }
-    .paper-item { background: #f8faff; border: 1px solid #dce5f2; border-radius: 9px; padding: 18px; }
-    .paper-item h3 { margin: 0 0 12px; color: #0b3d91; font-size: 18px; }
-    .button, .learning-resource a { display: inline-block; padding: 10px 16px; border-radius: 6px; background: #0b3d91; color: white; text-decoration: none; font-weight: bold; }
-    .button:hover, .learning-resource a:hover { background: #082c6c; }
-    .learning-resource { max-width: 1000px; margin: 30px auto; }
-    .learning-resource h2 { color: #0b3d91; }
-    .tech-grid { max-width: 1000px; margin: 24px auto 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 16px; }
-    .tech-card { background: white; border: 1px solid #dce5f2; border-radius: 12px; padding: 18px; box-shadow: 0 3px 12px rgba(0,0,0,0.08); }
-    .tech-card h3 { margin: 0 0 10px; color: #0b3d91; font-size: 1.1rem; }
-    .tech-card p { margin: 0 0 14px; color: #555; font-size: 0.96rem; }
-    .tech-card a { color: #0b3d91; font-weight: bold; text-decoration: none; }
-    .payment { margin-top: 32px; padding: 30px 18px; background: #0b3d91; color: white; text-align: center; }
-    .payment h2 { margin-top: 0; }
-    .answer-actions { margin-top: 18px; }
-    .unlock-answer-btn, .checkout-button, .close-payment-modal { border: none; border-radius: 8px; cursor: pointer; font-weight: bold; }
-    .unlock-answer-btn { background: #ffd966; color: #1f1f1f; padding: 12px 20px; font-size: 16px; }
-    .payment-modal { position: fixed; inset: 0; background: rgba(0,0,0,.62); display: flex; align-items: center; justify-content: center; z-index: 1000; }
-    .payment-modal[hidden], #answer-unlocked[hidden] { display: none; }
-    .payment-modal-content { position: relative; width: min(560px, 92vw); background: white; color: #222; padding: 24px 22px; border-radius: 12px; }
-    .payment-modal-content h3 { color: #0b3d91; }
-    .checkout-button { background: #0b3d91; color: white; padding: 12px 18px; }
-    .close-payment-modal { position: absolute; top: 12px; right: 12px; background: transparent; font-size: 28px; }
-    #answer-unlocked { max-width: 1000px; margin: 20px auto 0; background: #eaf9ee; border: 1px solid #bfe3c8; border-radius: 12px; padding: 24px; text-align: center; }
-    #quiz-section { max-width: 1000px; margin: 30px auto; padding: 20px; }
-    #quiz-section button { margin: 6px; padding: 10px 14px; cursor: pointer; }
-    #quiz-section input { padding: 10px; max-width: 100%; }
-    footer { margin-top: 32px; }
-    @media (max-width: 600px) { nav a { display: inline-block; margin: 5px; } .selector-panel, .learning-resource { padding: 17px; } }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(180deg, #f4f8ff 0%, #eef3fb 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; }
+
+    header {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 55%, #1d3b98 100%);
+      color: #fff;
+      padding: 18px 20px 26px;
+      box-shadow: 0 8px 20px rgba(10, 22, 48, 0.16);
+    }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .brand h1 {
+      margin: 0;
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      letter-spacing: 0.03em;
+    }
+
+    .brand p {
+      margin: 4px 0 0;
+      color: #dfe9ff;
+      font-size: 0.96rem;
+    }
+
+    nav {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 999px;
+      padding: 8px 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    nav a {
+      color: #edf5ff;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 8px 14px;
+      border-radius: 999px;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    nav a:hover {
+      background: rgba(255,255,255,0.12);
+      color: white;
+    }
+
+    .hero {
+      padding: 42px 20px 24px;
+      background:
+        radial-gradient(circle at top left, rgba(74, 199, 255, 0.3), transparent 30%),
+        linear-gradient(180deg, rgba(13, 45, 106, 0.08), rgba(13, 45, 106, 0.02));
+    }
+
+    .hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.3fr 0.9fr;
+      gap: 22px;
+      align-items: center;
+    }
+
+    .hero-copy {
+      background: rgba(255,255,255,0.78);
+      border: 1px solid rgba(160, 180, 220, 0.4);
+      border-radius: 24px;
+      padding: clamp(22px, 4vw, 40px);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(5px);
+    }
+
+    .eyebrow {
+      display: inline-block;
+      background: rgba(74, 199, 255, 0.16);
+      color: var(--navy-2);
+      border: 1px solid rgba(74, 199, 255, 0.4);
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .hero-copy h2 {
+      margin: 0 0 14px;
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      line-height: 1.1;
+      color: var(--navy);
+    }
+
+    .hero-copy p {
+      margin: 0 0 22px;
+      font-size: 1.06rem;
+      color: var(--muted);
+      max-width: 660px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 22px;
+    }
+
+    .button-primary, .button-secondary {
+      display: inline-block;
+      padding: 13px 20px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .button-primary {
+      background: linear-gradient(135deg, var(--blue) 0%, #3d88f8 100%);
+      color: white;
+      box-shadow: 0 12px 28px rgba(31, 90, 216, 0.28);
+    }
+
+    .button-secondary {
+      background: white;
+      color: var(--navy);
+      border: 1px solid var(--line);
+    }
+
+    .button-primary:hover, .button-secondary:hover {
+      transform: translateY(-1px);
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(120px, 1fr));
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .stat {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px 12px;
+      text-align: center;
+    }
+
+    .stat strong {
+      display: block;
+      color: var(--navy);
+      font-size: 1.2rem;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
+    .hero-panel {
+      background: linear-gradient(160deg, #0d2d6a 0%, #132a50 35%, #154f8c 100%);
+      border-radius: 24px;
+      color: white;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .panel-header {
+      padding: 18px 18px 12px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .dot-group {
+      display: flex;
+      gap: 8px;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .dot.red { background: #ff6b6b; }
+    .dot.yellow { background: #ffcc4d; }
+    .dot.green { background: #61d095; }
+
+    .panel-body {
+      padding: 18px;
+    }
+
+    .mini-card {
+      background: rgba(255,255,255,0.09);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 14px 15px;
+      margin-bottom: 12px;
+    }
+
+    .mini-card small {
+      color: rgba(255,255,255,0.8);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .mini-card h3 {
+      margin: 8px 0 6px;
+      font-size: 1.2rem;
+    }
+
+    .mini-card p {
+      margin: 0;
+      color: rgba(255,255,255,0.84);
+      font-size: 0.9rem;
+    }
+
+    .progress {
+      height: 10px;
+      background: rgba(255,255,255,0.12);
+      border-radius: 999px;
+      overflow: hidden;
+      margin-top: 14px;
+    }
+
+    .progress-bar {
+      width: 78%;
+      height: 100%;
+      background: linear-gradient(90deg, var(--cyan) 0%, var(--gold) 100%);
+      border-radius: inherit;
+    }
+
+    main { padding: 0 20px 40px; }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      margin: 0 0 18px;
+      font-size: clamp(1.5rem, 2vw, 2.2rem);
+      color: var(--navy);
+    }
+
+    .selector-panel {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+      padding: 24px;
+      margin-top: 26px;
+    }
+
+    .selector-chain {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 18px;
+    }
+
+    label {
+      display: block;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--navy);
+    }
+
+    select {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid #bfd0ec;
+      border-radius: 10px;
+      background: white;
+      font-size: 1rem;
+      color: var(--text);
+    }
+
+    select:disabled {
+      background: #eef3f9;
+      color: #7b8899;
+    }
+
+    #selection-status {
+      margin: 18px 0 0;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    #paper-results {
+      margin-top: 20px;
+    }
+
+    .paper-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+    }
+
+    .paper-item {
+      background: linear-gradient(180deg, #f9fbff 0%, #f1f6ff 100%);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 18px;
+    }
+
+    .paper-item h3 {
+      margin: 0 0 12px;
+      color: var(--navy);
+      font-size: 1.1rem;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 16px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--blue) 0%, #377be8 100%);
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .button:hover { filter: brightness(1.04); }
+
+    .learning-resource {
+      max-width: 1200px;
+      margin: 28px auto 0;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 26px 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .learning-resource h2 {
+      margin: 0 0 12px;
+      color: var(--navy);
+      font-size: clamp(1.4rem, 2vw, 2rem);
+    }
+
+    .learning-resource p {
+      margin: 0 0 18px;
+      color: var(--muted);
+    }
+
+    .learning-resource a {
+      display: inline-block;
+      padding: 11px 17px;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 100%);
+      color: white;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .course-grid {
+      max-width: 1200px;
+      margin: 26px auto 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 18px;
+    }
+
+    .course-card {
+      background: linear-gradient(180deg, #ffffff 0%, #f5f9ff 100%);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 20px 18px;
+      box-shadow: 0 10px 24px rgba(18, 42, 72, 0.08);
+    }
+
+    .course-card .tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      padding: 6px 9px;
+      background: #ebf3ff;
+      color: var(--navy-2);
+      border-radius: 999px;
+      letter-spacing: 0.04em;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .course-card h3 {
+      margin: 14px 0 8px;
+      color: var(--navy);
+      font-size: 1.18rem;
+    }
+
+    .course-card p {
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .course-card a {
+      color: var(--blue);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .payment {
+      margin-top: 32px;
+      padding: 32px 18px;
+      background: linear-gradient(135deg, var(--navy) 0%, #10378d 100%);
+      color: white;
+      text-align: center;
+      border-radius: 24px;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: var(--shadow);
+    }
+
+    .payment h2 {
+      margin-top: 0;
+      font-size: clamp(1.5rem, 2vw, 2.3rem);
+    }
+
+    .unlock-answer-btn, .checkout-button, .close-payment-modal {
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    .unlock-answer-btn {
+      background: linear-gradient(135deg, var(--gold) 0%, #f8d767 100%);
+      color: #1f1f1f;
+      padding: 12px 20px;
+      font-size: 1rem;
+    }
+
+    .payment-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.62);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      padding: 20px;
+    }
+
+    .payment-modal[hidden] { display: none; }
+
+    .payment-modal-content {
+      position: relative;
+      width: min(560px, 92vw);
+      background: white;
+      color: var(--text);
+      padding: 24px 22px;
+      border-radius: 18px;
+      box-shadow: 0 20px 46px rgba(0, 0, 0, 0.22);
+    }
+
+    .payment-modal-content h3 {
+      margin-top: 0;
+      color: var(--navy);
+      font-size: 1.5rem;
+    }
+
+    .payment-modal-content ul {
+      text-align: left;
+      margin: 16px 0;
+      line-height: 1.7;
+      color: var(--muted);
+    }
+
+    .checkout-button {
+      background: linear-gradient(135deg, var(--blue) 0%, #3d88f8 100%);
+      color: white;
+      padding: 12px 18px;
+      font-size: 0.96rem;
+    }
+
+    .close-payment-modal {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: transparent;
+      color: #666;
+      font-size: 28px;
+      line-height: 1;
+    }
+
+    #answer-unlocked {
+      max-width: 1200px;
+      margin: 20px auto 0;
+      background: #ebfaf0;
+      border: 1px solid #bfeccc;
+      border-radius: 18px;
+      padding: 24px;
+      text-align: center;
+    }
+
+    #answer-unlocked h3 {
+      color: #0d6b3c;
+      margin-top: 0;
+    }
+
+    #quiz-section {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 24px 20px 10px;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    #quiz-section h2 {
+      margin: 0 0 10px;
+      color: var(--navy);
+      font-size: clamp(1.5rem, 2vw, 2.2rem);
+    }
+
+    #quiz-section button {
+      margin: 6px;
+      padding: 10px 14px;
+      cursor: pointer;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: white;
+      color: var(--navy);
+      font-weight: 700;
+    }
+
+    #quiz-section input {
+      padding: 10px;
+      max-width: 100%;
+      border: 1px solid #bfd0ec;
+      border-radius: 10px;
+      margin: 6px 0;
+    }
+
+    footer {
+      background: linear-gradient(135deg, #071836 0%, #0d2d6a 100%);
+      color: white;
+      text-align: center;
+      padding: 22px 16px 30px;
+      margin-top: 34px;
+    }
+
+    footer p { margin: 6px 0; }
+
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 600px) {
+      nav { border-radius: 18px; }
+      nav a { padding: 8px 10px; }
+      .header-inner { justify-content: center; }
+      .stats { grid-template-columns: 1fr; }
+      .selector-panel, .learning-resource, .course-card, .payment { border-radius: 18px; }
+      .payment { padding-left: 14px; padding-right: 14px; }
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>Benes Papers</h1>
-    <p>Global Past Papers &amp; Educational Resources</p>
+    <div class="header-inner">
+      <div class="brand">
+        <h1>Benes Papers</h1>
+        <p>Global Past Papers &amp; Educational Resources</p>
+      </div>
+      <nav aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#paper-finder">Find Papers</a>
+        <a href="#answers">Explained Answers</a>
+        <a href="python-book.html">Learn Python</a>
+        <a href="programming-books.html">Programming Library</a>
+      </nav>
+    </div>
   </header>
-  <nav aria-label="Main navigation">
-    <a href="#home">Home</a>
-    <a href="#paper-finder">Find Papers</a>
-    <a href="#answers">Explained Answers</a>
-    <a href="python-book.html">Learn Python</a>
-    <a href="programming-books.html">Programming &amp; Tech Library</a>
-  </nav>
+
   <section class="hero" id="home">
-    <h2>Find Past Papers From Around the World</h2>
-    <p>Choose a country, level, and subject or course to see the matching papers.</p>
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <div class="eyebrow">Study smarter</div>
+        <h2>Past papers, programming books, and modern tech learning in one place.</h2>
+        <p>Explore exam resources, build real-world skills, and advance through beginner-to-advanced programming and technology courses designed for practical learning.</p>
+
+        <div class="hero-actions">
+          <a class="button-primary" href="#paper-finder">Find papers</a>
+          <a class="button-secondary" href="programming-books.html">Open learning library</a>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <strong>14+</strong>
+            <span>Courses</span>
+          </div>
+          <div class="stat">
+            <strong>8</strong>
+            <span>Programming paths</span>
+          </div>
+          <div class="stat">
+            <strong>100%</strong>
+            <span>Practical learning</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-panel" aria-label="Featured learning dashboard">
+        <div class="panel-header">
+          <div class="dot-group" aria-hidden="true">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <span style="font-size:0.8rem; color:rgba(255,255,255,0.8); font-weight:700; letter-spacing:0.08em; text-transform:uppercase;">Learning path</span>
+        </div>
+        <div class="panel-body">
+          <div class="mini-card">
+            <small>Featured</small>
+            <h3>Web Development</h3>
+            <p>HTML → CSS → JavaScript → TypeScript</p>
+          </div>
+          <div class="mini-card">
+            <small>Advanced</small>
+            <h3>Cybersecurity</h3>
+            <p>Defensive security, risk handling, and safe practices</p>
+          </div>
+          <div class="mini-card">
+            <small>Progress</small>
+            <h3>Current goal</h3>
+            <p>Build a complete project and strengthen your fundamentals</p>
+            <div class="progress"><div class="progress-bar"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
+
   <main>
     <section class="container" id="paper-finder">
       <h2 class="section-title">Find a Paper</h2>
@@ -99,42 +709,48 @@
 
     <section class="learning-resource" aria-labelledby="programming-books-title">
       <h2 id="programming-books-title">Programming &amp; Tech Learning Library</h2>
-      <p>Learn coding, cybersecurity, networking, Linux, databases, cloud computing, and data science through practical lessons, examples, exercises, and project ideas.</p>
+      <p>Explore coding, cybersecurity, networking, Linux, databases, cloud computing, and data science through guided learning paths.</p>
       <a href="programming-books.html">Explore all books &amp; tech courses</a>
     </section>
 
     <section class="container">
       <h2 class="section-title">Popular Tech Courses</h2>
-      <div class="tech-grid">
-        <div class="tech-card">
+      <div class="course-grid">
+        <div class="course-card">
+          <span class="tag">Security</span>
           <h3>Cybersecurity</h3>
-          <p>Learn secure habits, privacy protection, and defensive practices.</p>
-          <a href="programming-books.html#book-search">Open course</a>
+          <p>Learn safe systems, privacy practices, and defensive security foundations.</p>
+          <a href="programming-books.html">Open course</a>
         </div>
-        <div class="tech-card">
-          <h3>Networking</h3>
-          <p>Understand IP, DNS, HTTP, routing, and home network troubleshooting.</p>
-          <a href="programming-books.html#book-search">Open course</a>
+        <div class="course-card">
+          <span class="tag">Networking</span>
+          <h3>Computer Networking</h3>
+          <p>Understand IP, routing, DNS, and how devices communicate online.</p>
+          <a href="programming-books.html">Open course</a>
         </div>
-        <div class="tech-card">
+        <div class="course-card">
+          <span class="tag">Systems</span>
           <h3>Linux &amp; CLI</h3>
-          <p>Build command-line confidence, file handling, permissions, and automation.</p>
-          <a href="programming-books.html#book-search">Open course</a>
+          <p>Get comfortable with terminal commands, files, processes, and scripting.</p>
+          <a href="programming-books.html">Open course</a>
         </div>
-        <div class="tech-card">
+        <div class="course-card">
+          <span class="tag">Data</span>
           <h3>Databases &amp; SQL</h3>
-          <p>Learn tables, keys, queries, joins, indexes, and data integrity.</p>
-          <a href="programming-books.html#book-search">Open course</a>
+          <p>Master tables, keys, joins, queries, and reliable data design.</p>
+          <a href="programming-books.html">Open course</a>
         </div>
-        <div class="tech-card">
+        <div class="course-card">
+          <span class="tag">Cloud</span>
           <h3>Cloud Computing</h3>
-          <p>Explore cloud concepts, identity, deployment, cost, and reliability.</p>
-          <a href="programming-books.html#book-search">Open course</a>
+          <p>Understand cloud services, architecture, cost, and reliability planning.</p>
+          <a href="programming-books.html">Open course</a>
         </div>
-        <div class="tech-card">
+        <div class="course-card">
+          <span class="tag">Data</span>
           <h3>Data Science</h3>
-          <p>Discover analysis basics, statistics, visualization, and evidence-based thinking.</p>
-          <a href="programming-books.html#book-search">Open course</a>
+          <p>Build data literacy with analysis, visualization, and evidence-based thinking.</p>
+          <a href="programming-books.html">Open course</a>
         </div>
       </div>
     </section>
@@ -192,17 +808,27 @@
       </div>
     </section>
   </main>
+
   <footer>
     <p>© 2026 Benes Papers</p>
     <p>Created by Benes Makaza</p>
     <p>Global Educational Resources</p>
   </footer>
+
   <script src="script.js"></script>
   <script src="cascade.js"></script>
   <script>
-    document.querySelectorAll('.paid-answer').forEach(button => button.addEventListener('click', () => { document.getElementById('payment-modal').hidden = false; }));
-    document.querySelector('.close-payment-modal').addEventListener('click', () => { document.getElementById('payment-modal').hidden = true; });
-    document.getElementById('payment-modal').addEventListener('click', event => { if (event.target.id === 'payment-modal') event.currentTarget.hidden = true; });
+    document.querySelectorAll('.paid-answer').forEach(button => button.addEventListener('click', () => {
+      document.getElementById('payment-modal').hidden = false;
+    }));
+
+    document.querySelector('.close-payment-modal').addEventListener('click', () => {
+      document.getElementById('payment-modal').hidden = true;
+    });
+
+    document.getElementById('payment-modal').addEventListener('click', event => {
+      if (event.target.id === 'payment-modal') event.currentTarget.hidden = true;
+    });
   </script>
 </body>
 </html>
