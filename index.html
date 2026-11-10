@@ -28,6 +28,11 @@
     .button:hover, .learning-resource a:hover { background: #082c6c; }
     .learning-resource { max-width: 1000px; margin: 30px auto; }
     .learning-resource h2 { color: #0b3d91; }
+    .tech-grid { max-width: 1000px; margin: 24px auto 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 16px; }
+    .tech-card { background: white; border: 1px solid #dce5f2; border-radius: 12px; padding: 18px; box-shadow: 0 3px 12px rgba(0,0,0,0.08); }
+    .tech-card h3 { margin: 0 0 10px; color: #0b3d91; font-size: 1.1rem; }
+    .tech-card p { margin: 0 0 14px; color: #555; font-size: 0.96rem; }
+    .tech-card a { color: #0b3d91; font-weight: bold; text-decoration: none; }
     .payment { margin-top: 32px; padding: 30px 18px; background: #0b3d91; color: white; text-align: center; }
     .payment h2 { margin-top: 0; }
     .answer-actions { margin-top: 18px; }
@@ -48,56 +53,152 @@
   </style>
 </head>
 <body>
-  <header><h1>Benes Papers</h1><p>Global Past Papers &amp; Educational Resources</p></header>
+  <header>
+    <h1>Benes Papers</h1>
+    <p>Global Past Papers &amp; Educational Resources</p>
+  </header>
   <nav aria-label="Main navigation">
-    <a href="#home">Home</a><a href="#paper-finder">Find Papers</a><a href="#answers">Explained Answers</a>
-    <a href="python-book.html">Learn Python</a><a href="programming-books.html">Programming Books</a>
+    <a href="#home">Home</a>
+    <a href="#paper-finder">Find Papers</a>
+    <a href="#answers">Explained Answers</a>
+    <a href="python-book.html">Learn Python</a>
+    <a href="programming-books.html">Programming &amp; Tech Library</a>
   </nav>
-  <section class="hero" id="home"><h2>Find Past Papers From Around the World</h2><p>Choose a country, level, and subject or course to see the matching papers.</p></section>
+  <section class="hero" id="home">
+    <h2>Find Past Papers From Around the World</h2>
+    <p>Choose a country, level, and subject or course to see the matching papers.</p>
+  </section>
   <main>
     <section class="container" id="paper-finder">
       <h2 class="section-title">Find a Paper</h2>
       <div class="selector-panel">
         <div class="selector-chain">
-          <div><label for="country-select">1. Country</label><select id="country-select"><option value="">Select a country</option></select></div>
-          <div><label for="level-select">2. Grade / level</label><select id="level-select" disabled><option value="">Select a grade or level</option></select></div>
-          <div><label for="subject-select">3. Subject / course</label><select id="subject-select" disabled><option value="">Select a subject or course</option></select></div>
+          <div>
+            <label for="country-select">1. Country</label>
+            <select id="country-select"><option value="">Select a country</option></select>
+          </div>
+          <div>
+            <label for="level-select">2. Grade / level</label>
+            <select id="level-select" disabled><option value="">Select a grade or level</option></select>
+          </div>
+          <div>
+            <label for="subject-select">3. Subject / course</label>
+            <select id="subject-select" disabled><option value="">Select a subject or course</option></select>
+          </div>
         </div>
         <p id="selection-status" aria-live="polite">Select a country to begin. Papers will appear after you choose all three options.</p>
         <div id="paper-results" aria-live="polite" hidden></div>
       </div>
     </section>
+
     <section class="learning-resource" aria-labelledby="python-book-title">
       <h2 id="python-book-title">Learn Python: Beginner to Advanced</h2>
-      <p>Start with your first program and progress through functions, files, classes, testing, algorithms, and concurrency.</p>
+      <p>Start with your first program and progress through functions, files, classes, testing, algorithms, and concurrency with practical examples and exercises.</p>
       <a href="python-book.html">Open the free Python book</a>
     </section>
+
     <section class="learning-resource" aria-labelledby="programming-books-title">
-      <h2 id="programming-books-title">Programming Books: Beginner to Advanced</h2>
-      <p>Learn C++, C, JavaScript, TypeScript, C#, PHP, HTML, and CSS through practical lessons, examples, exercises, and project ideas.</p>
-      <a href="programming-books.html">Explore all programming books</a>
+      <h2 id="programming-books-title">Programming &amp; Tech Learning Library</h2>
+      <p>Learn coding, cybersecurity, networking, Linux, databases, cloud computing, and data science through practical lessons, examples, exercises, and project ideas.</p>
+      <a href="programming-books.html">Explore all books &amp; tech courses</a>
     </section>
+
+    <section class="container">
+      <h2 class="section-title">Popular Tech Courses</h2>
+      <div class="tech-grid">
+        <div class="tech-card">
+          <h3>Cybersecurity</h3>
+          <p>Learn secure habits, privacy protection, and defensive practices.</p>
+          <a href="programming-books.html#book-search">Open course</a>
+        </div>
+        <div class="tech-card">
+          <h3>Networking</h3>
+          <p>Understand IP, DNS, HTTP, routing, and home network troubleshooting.</p>
+          <a href="programming-books.html#book-search">Open course</a>
+        </div>
+        <div class="tech-card">
+          <h3>Linux &amp; CLI</h3>
+          <p>Build command-line confidence, file handling, permissions, and automation.</p>
+          <a href="programming-books.html#book-search">Open course</a>
+        </div>
+        <div class="tech-card">
+          <h3>Databases &amp; SQL</h3>
+          <p>Learn tables, keys, queries, joins, indexes, and data integrity.</p>
+          <a href="programming-books.html#book-search">Open course</a>
+        </div>
+        <div class="tech-card">
+          <h3>Cloud Computing</h3>
+          <p>Explore cloud concepts, identity, deployment, cost, and reliability.</p>
+          <a href="programming-books.html#book-search">Open course</a>
+        </div>
+        <div class="tech-card">
+          <h3>Data Science</h3>
+          <p>Discover analysis basics, statistics, visualization, and evidence-based thinking.</p>
+          <a href="programming-books.html#book-search">Open course</a>
+        </div>
+      </div>
+    </section>
+
     <section class="payment" id="answers">
-      <h2>Need Explained Answers?</h2><p>Get detailed explanations and solutions to selected past papers.</p><strong>Access explained answers for only K1.00</strong>
-      <div class="answer-actions"><button type="button" class="unlock-answer-btn paid-answer">Pay K1.00 to unlock</button></div>
+      <h2>Need Explained Answers?</h2>
+      <p>Get detailed explanations and solutions to selected past papers.</p>
+      <strong>Access explained answers for only K1.00</strong>
+      <div class="answer-actions">
+        <button type="button" class="unlock-answer-btn paid-answer">Pay K1.00 to unlock</button>
+      </div>
     </section>
-    <section id="answer-unlocked" hidden><h3>✓ Explained answer unlocked</h3><p>Your payment has been verified, and the answer file is now available for download.</p><a class="button" href="answer-sample.txt" download="explained-answer-sample.txt">Download explained answer</a></section>
+
+    <section id="answer-unlocked" hidden>
+      <h3>✓ Explained answer unlocked</h3>
+      <p>Your payment has been verified, and the answer file is now available for download.</p>
+      <a class="button answer-download" href="answer-sample.txt" download="explained-answer-sample.txt">Download explained answer</a>
+    </section>
+
     <div id="payment-modal" class="payment-modal" hidden>
       <div class="payment-modal-content" role="dialog" aria-modal="true" aria-labelledby="payment-title">
-        <button type="button" class="close-payment-modal" aria-label="Close">×</button><h3 id="payment-title">Secure payment checkout</h3>
+        <button type="button" class="close-payment-modal" aria-label="Close">×</button>
+        <h3 id="payment-title">Secure payment checkout</h3>
         <p>Customers pay through a secure payment provider before they can access the explained answers.</p>
-        <ul><li>Your personal MTN number is hidden from the customer.</li><li>The merchant account can accept cards and local mobile money.</li><li>Access is granted only after the payment is verified.</li><li>Replace the demo checkout link with your live provider checkout URL before going live.</li></ul>
+        <ul>
+          <li>Your personal MTN number is hidden from the customer.</li>
+          <li>The merchant account can accept cards and local mobile money.</li>
+          <li>Access is granted only after the payment is verified.</li>
+          <li>Replace the demo checkout link with your live provider checkout URL before going live.</li>
+        </ul>
         <button type="button" class="checkout-button" onclick="window.open('https://example.com/checkout/benes-papers', '_blank', 'noopener,noreferrer')">Continue to secure checkout</button>
       </div>
     </div>
-    <section id="quiz-section"><h2>🧠 Quiz Challenge</h2><p>Test yourself or challenge your friends!</p>
-      <div class="quiz-options"><button onclick="startSoloQuiz()">🎯 Solo Quiz</button><button onclick="startBattleQuiz()">⚔️ Challenge Friends</button></div>
-      <div id="quiz-container" style="display:none"><h3 id="quiz-question">Question will appear here</h3><div id="quiz-answers"></div><p id="quiz-score">Score: 0</p><button id="next-question" onclick="nextQuestion()">Next Question</button><button onclick="endQuiz()">End Quiz</button></div>
-      <div id="battle-container" style="display:none"><h3>⚔️ Quiz Battle</h3><label for="player1">Player 1</label><input id="player1" placeholder="Enter name"><label for="player2">Player 2</label><input id="player2" placeholder="Enter name"><label for="player3">Player 3 (optional)</label><input id="player3" placeholder="Enter name"><p><button onclick="startBattle()">Start Battle</button></p></div>
+
+    <section id="quiz-section">
+      <h2>🧠 Quiz Challenge</h2>
+      <p>Test yourself or challenge your friends!</p>
+      <div class="quiz-options">
+        <button onclick="startSoloQuiz()">🎯 Solo Quiz</button>
+        <button onclick="startBattleQuiz()">⚔️ Challenge Friends</button>
+      </div>
+      <div id="quiz-container" style="display:none">
+        <h3 id="quiz-question">Question will appear here</h3>
+        <div id="quiz-answers"></div>
+        <p id="quiz-score">Score: 0</p>
+        <button id="next-question" onclick="nextQuestion()">Next Question</button>
+        <button onclick="endQuiz()">End Quiz</button>
+      </div>
+      <div id="battle-container" style="display:none">
+        <h3>⚔️ Quiz Battle</h3>
+        <label for="player1">Player 1</label><input id="player1" placeholder="Enter name">
+        <label for="player2">Player 2</label><input id="player2" placeholder="Enter name">
+        <label for="player3">Player 3 (optional)</label><input id="player3" placeholder="Enter name">
+        <p><button onclick="startBattle()">Start Battle</button></p>
+      </div>
     </section>
   </main>
-  <footer><p>© 2026 Benes Papers</p><p>Created by Benes Makaza</p><p>Global Educational Resources</p></footer>
-  <script src="script.js"></script><script src="cascade.js"></script>
+  <footer>
+    <p>© 2026 Benes Papers</p>
+    <p>Created by Benes Makaza</p>
+    <p>Global Educational Resources</p>
+  </footer>
+  <script src="script.js"></script>
+  <script src="cascade.js"></script>
   <script>
     document.querySelectorAll('.paid-answer').forEach(button => button.addEventListener('click', () => { document.getElementById('payment-modal').hidden = false; }));
     document.querySelector('.close-payment-modal').addEventListener('click', () => { document.getElementById('payment-modal').hidden = true; });
